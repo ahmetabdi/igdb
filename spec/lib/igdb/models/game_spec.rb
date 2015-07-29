@@ -3,6 +3,10 @@ require 'spec_helper'
 describe Igdb::Game do
   subject { described_class }
 
+  before do
+    Igdb.connect('egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E')
+  end
+
   describe "public class methods" do
     context "responds to its methods" do
       it { expect(subject).to respond_to(:find) }

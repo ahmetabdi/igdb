@@ -12,12 +12,7 @@ module Igdb::Configuration
     end
 
     def connect(api_key)
-      begin
-        @api_key = api_key
-        true
-      rescue Igdb::Exception::Api
-        false
-      end
+      @api_key = api_key
     end
 
     def url_for(action, params={})

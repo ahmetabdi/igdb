@@ -4,7 +4,7 @@ describe Igdb::Game do
   subject { described_class }
 
   before do
-    Igdb.connect('egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E')
+    Igdb.connect('egBf')
   end
 
   describe "public class methods" do

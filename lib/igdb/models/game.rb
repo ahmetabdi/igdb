@@ -1,7 +1,6 @@
 require 'representable/json'
 class Igdb::Game < Igdb::ApiResource
 
-  # Returns a single movie's details.
   def self.find(id)
     build_single_resource(Igdb::Requester.get("games/#{id}")['game'], GameRepresenter)
   end

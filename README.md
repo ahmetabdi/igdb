@@ -10,9 +10,18 @@
 
 ## Usage
 
-TODO: Write usage instructions here
+##### Connect
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    $ Igdb.connect('api_key')
+
+##### Game
+  Find game by ID
+
+    $ Igdb::Game.find(1971)
+
+  Search for a game
+
+    $ Igdb::Game.search('batman')
 
 ## Contributing
 

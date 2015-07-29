@@ -1,4 +1,3 @@
-require 'representable/json'
 class Igdb::Game < Igdb::ApiResource
 
   def self.find(id)
@@ -12,5 +11,4 @@ class Igdb::Game < Igdb::ApiResource
     end
     build_collection(Igdb::Requester.get("games/search", params)['games'], GameRepresenter)
   end
-
 end

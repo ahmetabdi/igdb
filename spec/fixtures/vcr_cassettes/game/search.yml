@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.igdb.com/api/v1/games/search?q=batman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 29 Jul 2015 12:33:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dad74ed07656325a8df8f2d45d8c07d961438173201; expires=Thu, 28-Jul-16
+        12:33:21 GMT; path=/; domain=.igdb.com; HttpOnly
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"e29119a2536ddea93ae410656c9049d3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4863082c-04d3-4da1-8b4e-3b63f21ada51
+      X-Runtime:
+      - '0.115165'
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      Cf-Ray:
+      - 20d8da0e95890300-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIABHIuFUA/3SQzWrDMBCEX0XobIFc23GqW9LSQ3MIhNJL6UFJZFl1LYGs
+        JJTgd68b/RQk57gzO98Oe4Wc9myA5OMKxRGSHFc5zqCcREjgmpqeSpjB4fvE
+        p3lv5zGzy1VdxrsEvDPJGZUHFsfQOTgeUBb1YwQAO2ZOWg5JWjvdZ+t6kWRf
+        lGZnppNs43SfLfCiiLNrxsXM2b2VQ+NyGV8lrjJQDTAtA6+qm6lg6yPVoGkH
+        fd12/v9YLBPoM9UdeFO90lpdEtxxcpHxbgDhPOGsdNfSHjwJ85NQ6M1Dhz/P
+        Mx4wjn8TIFstZp/kOMrZoU51H7WRgrfmHqmz7vg5/gIAAP//AwDZBb8HoQIA
+        AA==
+    http_version: 
+  recorded_at: Wed, 29 Jul 2015 12:33:22 GMT
+recorded_with: VCR 2.9.3

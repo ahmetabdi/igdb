@@ -1,13 +1,10 @@
 require 'rest_client'
-require 'ostruct'
 
 class Igdb::Requester
   class << self
 
     def get(action, params={})
-      puts "GET: #{action} #{params}"
       url = api.url_for(action, params)
-      puts "URL: #{url}"
       perform_request do
         parse_response(RestClient.get(url, request_headers))
       end
@@ -33,21 +30,11 @@ class Igdb::Requester
     end
 
     def perform_request(&block)
+      raise Igdb::Exception::Api.new("You must connect with your API Key!") if api.api_key.nil?
       begin
         block.call
       rescue RestClient::Exception => e
-        message = if e.http_body.strip.empty?
-          e
-        else
-          message = ["Exception:"]
-          message << "@message=\"#{e.message}\""
-
-          JSON.parse(e.http_body).each do |k,v|
-            message << "@#{k}=\"#{v}\""
-          end
-          message.join(" ")
-        end
-        raise Igdb::Exception::Api.new(message).inspect
+        raise Igdb::Exception::Api.new(e.message)
       end
     end
 
@@ -61,7 +48,7 @@ class Igdb::Requester
 
     def parse_response(response_body)
       begin
-        JSON.parse(response_body)#, object_class: OpenStruct)
+        JSON.parse(response_body)
       rescue JSON::ParserError => e
         raise Enceladus::Exception::JsonParseError.new("Response body could not be parsed: #{e.message}")
       end

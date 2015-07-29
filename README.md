@@ -21,7 +21,7 @@
 
   Search for a game
 
-    $ Igdb::Game.search('batman')
+    $ Igdb::Game.search(query: 'batman')
 
 ## Contributing
 

@@ -6,7 +6,7 @@ describe Igdb do
   end
 
   describe ".connect" do
-    subject { VCR.use_cassette("connect") { Igdb.connect(api_key) } }
+    subject { Igdb.connect(api_key) }
     let(:api_key) { "egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E" }
 
     it "should start the configuration workflow" do

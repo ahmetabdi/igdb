@@ -11,12 +11,21 @@ describe Igdb::Game do
 
     context "executes methods correctly" do
       context "self.find" do
-        it "returns a game"
+        let(:game) { VCR.use_cassette("game/find") { subject.find(2000) } }
+
+        it "returns a game" do
+          expect(game).to be_a Igdb::Game
+        end
       end
+
       context "self.search" do
-        it "returns a group of game results"
+        let(:game) { VCR.use_cassette("game/search") { subject.search(query: 'batman') } }
+
+        it "returns a group of game results" do
+          expect(game).to be_a Array
+          expect(game).not_to be_empty
+        end
       end
     end
   end
-
 end

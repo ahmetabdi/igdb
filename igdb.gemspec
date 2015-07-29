@@ -19,8 +19,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.9"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency 'bundler', "~> 1.9"
+  spec.add_development_dependency 'rake', "~> 10.0"
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'guard'
@@ -28,9 +28,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard-rspec'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 
   spec.add_runtime_dependency 'representable'
   spec.add_runtime_dependency 'multi_json'
-  spec.add_runtime_dependency "rest-client"
+  spec.add_runtime_dependency 'rest-client'
   spec.add_runtime_dependency 'require_all'
 end

@@ -14,6 +14,14 @@ describe Igdb::Game do
     end
 
     context "executes methods correctly" do
+      context "self.meta" do
+        let(:game) { VCR.use_cassette("game/meta") { subject.meta } }
+
+        it "return the number of games in the database" do
+          expect(game).to eq(11321)
+        end
+      end
+
       context "self.find" do
         let(:game) { VCR.use_cassette("game/find") { subject.find(2000) } }
 

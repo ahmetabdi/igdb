@@ -23,6 +23,10 @@
 
     $ Igdb::Game.search(query: 'batman')
 
+  Return the number of games in the database
+
+    $ Igdb::Game.meta
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/igdb/fork )

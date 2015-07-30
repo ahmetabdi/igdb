@@ -1,5 +1,9 @@
 class Igdb::Game < Igdb::ApiResource
 
+  def self.meta
+    build_single_resource(Igdb::Requester.get("games/meta"), GameRepresenter).size
+  end
+
   def self.find(id)
     build_single_resource(Igdb::Requester.get("games/#{id}")['game'], GameRepresenter)
   end
@@ -11,4 +15,5 @@ class Igdb::Game < Igdb::ApiResource
     end
     build_collection(Igdb::Requester.get("games/search", params)['games'], GameRepresenter)
   end
+
 end

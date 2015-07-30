@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.igdb.com/api/v1/games/meta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="egBf"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 30 Jul 2015 08:01:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dce4985bca18578ca8a2a16663c91b3b61438243313; expires=Fri, 29-Jul-16
+        08:01:53 GMT; path=/; domain=.igdb.com; HttpOnly
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"f873f96cfb33b725c5a5ecbdeaf02b83"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b07de33d-6644-4a22-a125-922ce6270bdf
+      X-Runtime:
+      - '0.101863'
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      Cf-Ray:
+      - 20df89c4973b0a8a-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAPHZuVUA/6pWKs6sSlWyMjQ0NjKsBQAAAP//AwBZk6PhDgAAAA==
+    http_version:
+  recorded_at: Thu, 30 Jul 2015 08:01:53 GMT
+recorded_with: VCR 2.9.3

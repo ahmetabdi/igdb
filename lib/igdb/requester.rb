@@ -30,11 +30,10 @@ class Igdb::Requester
     end
 
     def perform_request(&block)
-      return Igdb::Exception::Api.new("You must connect with your API Key!") if api.api_key.nil?
       begin
         block.call
       rescue RestClient::Exception => e
-        Igdb::Exception::Api.new(e.message)
+        raise Igdb::Exception::Api.new(e.message)
       end
     end
 
@@ -50,7 +49,7 @@ class Igdb::Requester
       begin
         JSON.parse(response_body)
       rescue JSON::ParserError => e
-        Igdb::Exception::JsonParseError.new("Response body could not be parsed: #{e.message}")
+        raise Igdb::Exception::JsonParseError.new("Response body could not be parsed: #{e.message}")
       end
     end
   end

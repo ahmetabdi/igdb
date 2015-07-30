@@ -15,6 +15,7 @@ module GameRepresenter
   property :cover # The cover image of the game.
   property :subtitle  # The subtitle of the screenshot.
   property :src # The source of the image in the thumbnail format.
+  property :size
 
   collection :release_dates, extend: GameReleaseDateRespresenter, class: Igdb::GameReleaseDate # The release dates of the game.
   collection :screenshots, extend: GameScreenshotRepresenter, class: Igdb::GameScreenshot # The list of screenshots of the game.

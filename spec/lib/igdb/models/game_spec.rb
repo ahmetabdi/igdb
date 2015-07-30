@@ -57,9 +57,8 @@ describe Igdb::Game do
         end
 
         it "returns a offset" do
-          pending("Not working correctly on API end")
           expect(game_with_limit_and_offset).to be_a Array
-          expect(game_with_limit_and_offset.length).to eq(3)
+          expect(game_with_limit_and_offset.length).to eq(5)
         end
 
       end

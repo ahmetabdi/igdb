@@ -7,7 +7,7 @@ describe Igdb do
 
   describe ".connect" do
     subject { Igdb.connect(api_key) }
-    let(:api_key) { "egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E" }
+    let(:api_key) { "egBf" }
 
     it "should start the configuration workflow" do
       subject
@@ -18,7 +18,7 @@ describe Igdb do
     end
 
     it "should have a API key" do
-      expect(subject.api_key).to eq('egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E')
+      expect(subject.api_key).to eq('egBf')
     end
 
     it "should have a API version" do

@@ -14,7 +14,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Token token="egBf-guz6Z8ZIMYw0GMykId-V0-OumqBwy988YFyq2E"
+      - Token token="egBf"
       User-Agent:
       - Ruby
   response:
@@ -74,6 +74,6 @@ http_interactions:
         JzQ+yn60THXXHEqdyjwivWb6va3ylZmA6OVc0mC1x/2f0B+qUW25Wrz5h2Si
         5HLED76/y/19rE/aX+zoZQR+DpqcxC9Ul38ftdRP/On88Xm3zcu53X4DAAD/
         /wMATjAue14DAAA=
-    http_version: 
+    http_version:
   recorded_at: Wed, 29 Jul 2015 12:31:04 GMT
 recorded_with: VCR 2.9.3

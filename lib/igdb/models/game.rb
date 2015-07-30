@@ -16,4 +16,12 @@ class Igdb::Game < Igdb::ApiResource
     build_collection(Igdb::Requester.get("games/search", params)['games'], GameRepresenter)
   end
 
+  def self.all(opts={})
+    params = Hash.new.tap do |hash|
+      hash['offset'] = opts[:offset] || 0
+      hash['limit'] = opts[:limit] || 100
+    end
+    build_collection(Igdb::Requester.get("games", params)['games'], GameRepresenter)
+  end
+
 end

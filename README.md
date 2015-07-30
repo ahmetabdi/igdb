@@ -27,6 +27,12 @@
 
     $ Igdb::Game.meta
 
+  Return a list of all games with an offset and/or limit
+
+    $ Igdb::Game.all
+    $ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
+    $ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/igdb/fork )

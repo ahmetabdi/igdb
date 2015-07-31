@@ -9,8 +9,10 @@ describe Igdb::Game do
 
   describe "public class methods" do
     context "responds to its methods" do
+      it { expect(subject).to respond_to(:meta) }
       it { expect(subject).to respond_to(:find) }
       it { expect(subject).to respond_to(:search) }
+      it { expect(subject).to respond_to(:all) }
     end
 
     context "executes methods correctly" do

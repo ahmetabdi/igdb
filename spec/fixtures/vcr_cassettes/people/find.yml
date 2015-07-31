@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.igdb.com/api/v1/people/2000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="egBf"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 31 Jul 2015 07:37:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=ded2211e0d362d63b03d36908a84537141438328279; expires=Sat, 30-Jul-16
+        07:37:59 GMT; path=/; domain=.igdb.com; HttpOnly
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"8d29836ba64a4043b2fa08faa692be2e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0355cc30-a3f0-410c-92e1-4d64a23ddb9f
+      X-Runtime:
+      - '0.056232'
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      Cf-Ray:
+      - 20e7a4213a31061c-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIANclu1UA/1TJsQqAIBRG4VeJfzaQRsfmXkJTQrhpqHdI8d0roqHtHL6G
+        w6UcA1SDt1CTlFIg6N1BYdGc9DDrUnwuXKuHQCbebqKHRvMjGw1UYCKBNXIo
+        6fzW+Phm7xcAAAD//wMA8JlhL3EAAAA=
+    http_version:
+  recorded_at: Fri, 31 Jul 2015 07:37:59 GMT
+recorded_with: VCR 2.9.3

@@ -1,4 +1,5 @@
 # IGDB: Internet Game Database
+[![Circle CI](https://circleci.com/gh/ahmetabdi/igdb.svg?style=svg)](https://circleci.com/gh/ahmetabdi/igdb)
 [![Build Status](https://travis-ci.org/ahmetabdi/igdb.svg)](https://travis-ci.org/ahmetabdi/igdb)
 [![Code Climate](https://codeclimate.com/github/ahmetabdi/igdb/badges/gpa.svg)](https://codeclimate.com/github/ahmetabdi/igdb)
 [![Test Coverage](https://codeclimate.com/github/ahmetabdi/igdb/badges/coverage.svg)](https://codeclimate.com/github/ahmetabdi/igdb/coverage)

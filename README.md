@@ -50,6 +50,16 @@
     $ Igdb::Person.all(limit: 10) # Limit to 10 results - Default 100
     $ Igdb::Person.all(offset: 5) # Offset result starting at 5th - Default 0
 
+##### Company
+  Find company by ID or name
+
+    $ Igdb::Company.find(70)
+    $ Igdb::Company.find('nintendo')
+
+  return the number of companies in the database.
+
+    $ Igdb::Company.meta
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/igdb/fork )

@@ -56,7 +56,7 @@
     $ Igdb::Company.find(70)
     $ Igdb::Company.find('nintendo')
 
-  return the number of companies in the database.
+  Return the number of companies in the database.
 
     $ Igdb::Company.meta
 

@@ -9,64 +9,64 @@
 <img src="banner.png">
 
 ## Installation
-    $ gem install igdb
-
+```ruby
+$ gem install igdb
+```
 ## Usage
 
 ##### Connect
-
-    $ Igdb.connect('api_key')
-
+```ruby
+$ Igdb.connect('api_key')
+```
 ##### Game
   Find game by ID
-
-    $ Igdb::Game.find(1971)
-
+```ruby
+$ Igdb::Game.find(1971)
+```
   Search for a game
-
-    $ Igdb::Game.search(query: 'batman')
-
+```ruby
+$ Igdb::Game.search(query: 'batman')
+```
   Return the number of games in the database
-
-    $ Igdb::Game.meta
-
+```ruby
+$ Igdb::Game.meta
+```
   Return a list of all games with an offset and/or limit
-
-    $ Igdb::Game.all
-    $ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
-    $ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
-
+```ruby
+$ Igdb::Game.all
+$ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
+$ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
+```
 ##### Person
   Find person by ID or name
-
-    $ Igdb::Person.find(4)
-    $ Igdb::Person.find('derek-watts')
-
+```ruby
+$ Igdb::Person.find(4)
+$ Igdb::Person.find('derek-watts')
+```
   Return the number of people in the database
-
-    $ Igdb::Person.meta
-
+```ruby
+$ Igdb::Person.meta
+```
   Return a list of all games with an offset and/or limit
-
-    $ Igdb::Person.all
-    $ Igdb::Person.all(limit: 10) # Limit to 10 results - Default 100
-    $ Igdb::Person.all(offset: 5) # Offset result starting at 5th - Default 0
-
+```ruby
+$ Igdb::Person.all
+$ Igdb::Person.all(limit: 10) # Limit to 10 results - Default 100
+$ Igdb::Person.all(offset: 5) # Offset result starting at 5th - Default 0
+```
 ##### Company
   Find company by ID or name
-
-    $ Igdb::Company.find(70)
-    $ Igdb::Company.find('nintendo')
-
+```ruby
+$ Igdb::Company.find(70)
+$ Igdb::Company.find('nintendo')
+```
   Return the number of companies in the database.
-
-    $ Igdb::Company.meta
-
+```ruby
+$ Igdb::Company.meta
+```
   Return the games for a company
-
-    $ company = Igdb::Company.find('2000')
-    $ company.games
-
+```ruby
+$ Igdb::Company.find('2000').games
+```
 ## Contributing
 
 1. Fork it ( https://github.com/ahmetabdi/igdb/fork )

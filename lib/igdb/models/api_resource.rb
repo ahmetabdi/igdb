@@ -1,4 +1,5 @@
 require 'representable/json'
+
 class Igdb::ApiResource < OpenStruct
 
   private

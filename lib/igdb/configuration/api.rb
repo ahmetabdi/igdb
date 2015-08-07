@@ -22,6 +22,6 @@ module Igdb::Configuration
     end
 
     private
-      attr_writer :base_url, :api_key, :version, :oauth_url
+      attr_writer :base_url, :api_key, :version
   end
 end

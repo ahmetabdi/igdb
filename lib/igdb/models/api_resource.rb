@@ -12,4 +12,8 @@ class Igdb::ApiResource < OpenStruct
       resources << self.new.extend(representer).from_hash(response)
     end
   end
+
+  def build_for_collection(response, representer)
+    [].extend(representer.for_collection).from_hash(response)
+  end
 end

@@ -29,6 +29,17 @@ describe Igdb::Company do
           expect(company).to be_a Igdb::Company
         end
       end
+
+      context ".games" do
+        let(:company) { Igdb::Company.new(id: 2000) }
+        let(:games) { VCR.use_cassette("companies/games") { company.games }}
+
+        it "returns games by the company" do
+          expect(games).to_not be_empty
+          expect(games).to be_a Array
+          expect(games.first).to be_a Igdb::Game
+        end
+      end
     end
   end
 end

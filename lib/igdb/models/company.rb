@@ -8,4 +8,13 @@ class Igdb::Company < Igdb::ApiResource
     build_single_resource(Igdb::Requester.get("companies/#{id}")['company'], CompanyRepresenter)
   end
 
+  # Show games of a specific company
+  def games(opts={})
+    params = Hash.new.tap do |hash|
+      hash['offset'] = opts[:offset] || 0
+      hash['limit'] = opts[:limit] || 100
+    end
+    build_for_collection(Igdb::Requester.get("companies/#{id}/games", params)['games'], CompanyRepresenter)
+  end
+
 end

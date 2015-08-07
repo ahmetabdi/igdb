@@ -62,6 +62,11 @@
 
     $ Igdb::Company.meta
 
+  Return the games for a company
+
+    $ company = Igdb::Company.find('2000')
+    $ company.games
+
 ## Contributing
 
 1. Fork it ( https://github.com/ahmetabdi/igdb/fork )

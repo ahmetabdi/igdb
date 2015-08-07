@@ -6,6 +6,8 @@
 [![Gem Version](https://badge.fury.io/rb/igdb.svg)](http://badge.fury.io/rb/igdb)
 [![Dependency Status](https://gemnasium.com/ahmetabdi/igdb.svg)](https://gemnasium.com/ahmetabdi/igdb)
 
+<img src="banner.png" height="150">
+
 ## Installation
     $ gem install igdb
 
@@ -62,7 +64,7 @@
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/igdb/fork )
+1. Fork it ( https://github.com/ahmetabdi/igdb/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

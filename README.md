@@ -6,7 +6,7 @@
 [![Gem Version](https://badge.fury.io/rb/igdb.svg)](http://badge.fury.io/rb/igdb)
 [![Dependency Status](https://gemnasium.com/ahmetabdi/igdb.svg)](https://gemnasium.com/ahmetabdi/igdb)
 
-<img src="banner.png" height="150">
+<img src="banner.png">
 
 ## Installation
     $ gem install igdb

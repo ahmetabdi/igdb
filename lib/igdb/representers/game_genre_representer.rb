@@ -1,4 +1,4 @@
-module GameGenreRepresenter
+module Igdb::GameGenreRepresenter
   include Representable::JSON
 
   property :name

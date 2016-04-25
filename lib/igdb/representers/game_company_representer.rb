@@ -1,4 +1,4 @@
-module GameCompanyRespresenter
+module Igdb::GameCompanyRespresenter
   include Representable::JSON
 
   property :name

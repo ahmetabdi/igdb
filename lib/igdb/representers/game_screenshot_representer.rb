@@ -1,4 +1,4 @@
-module GameScreenshotRepresenter
+module Igdb::GameScreenshotRepresenter
   include Representable::JSON
 
   property :title

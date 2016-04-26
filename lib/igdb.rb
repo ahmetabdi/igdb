@@ -1,7 +1,6 @@
-require 'igdb/configuration/api'
-
 module Igdb
   #Utilities
+  autoload :Configuration, 'igdb/configuration/api'
   autoload :Requester, 'igdb/requester'
   autoload :Exception, 'igdb/exceptions'
 

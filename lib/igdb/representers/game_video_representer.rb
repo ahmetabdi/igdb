@@ -1,4 +1,4 @@
-module GameVideoRepresenter
+module Igdb::GameVideoRepresenter
   include Representable::JSON
 
   property :title

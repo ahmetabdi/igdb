@@ -1,4 +1,4 @@
-module GameReleaseDateRespresenter
+module Igdb::GameReleaseDateRespresenter
   include Representable::JSON
 
   property :platform_name

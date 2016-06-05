@@ -1,4 +1,4 @@
-module CompanyRepresenter
+module Igdb::CompanyRepresenter
   include Representable::JSON
 
   property :id # The id of the game.

@@ -9,12 +9,12 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Ahmet Abdi']
   spec.email         = ['ahmetabdi@gmail.com']
 
-  spec.summary       = ''
+  spec.summary       = 'A Ruby wrapper for the Internet Game Database API.'
   spec.description   = ''
   spec.homepage      = ''
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = Dir['README.md', 'igdb.gemspec', 'lib/**/*']
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
@@ -29,5 +29,4 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'representable'
   spec.add_runtime_dependency 'multi_json'
   spec.add_runtime_dependency 'rest-client'
-  spec.add_runtime_dependency 'require_all'
 end

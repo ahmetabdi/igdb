@@ -1,4 +1,4 @@
-module PersonRepresenter
+module Igdb::PersonRepresenter
   include Representable::JSON
 
   property :id # The id of the person.

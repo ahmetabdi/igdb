@@ -1,11 +1,11 @@
 class Igdb::Game < Igdb::ApiResource
 
   def self.meta
-    build_single_resource(Igdb::Requester.get("games/meta"), GameRepresenter).size
+    build_single_resource(Igdb::Requester.get("games/meta"), Igdb::GameRepresenter).size
   end
 
   def self.find(id)
-    build_single_resource(Igdb::Requester.get("games/#{id}")['game'], GameRepresenter)
+    build_single_resource(Igdb::Requester.get("games/#{id}")['game'], Igdb::GameRepresenter)
   end
 
   def self.search(opts={})
@@ -13,7 +13,7 @@ class Igdb::Game < Igdb::ApiResource
       hash['q'] = opts[:query] if opts[:query]
       hash['filters'] = opts[:filters] if opts[:filters]
     end
-    build_collection(Igdb::Requester.get("games/search", params)['games'], GameRepresenter)
+    build_collection(Igdb::Requester.get("games/search", params)['games'], Igdb::GameRepresenter)
   end
 
   def self.all(opts={})
@@ -21,7 +21,7 @@ class Igdb::Game < Igdb::ApiResource
       hash['offset'] = opts[:offset] || 0
       hash['limit'] = opts[:limit] || 100
     end
-    build_collection(Igdb::Requester.get("games", params)['games'], GameRepresenter)
+    build_collection(Igdb::Requester.get("games", params)['games'], Igdb::GameRepresenter)
   end
 
 end

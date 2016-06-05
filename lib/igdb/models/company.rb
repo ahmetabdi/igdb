@@ -1,11 +1,11 @@
 class Igdb::Company < Igdb::ApiResource
 
   def self.meta
-    build_single_resource(Igdb::Requester.get("companies/meta"), CompanyRepresenter).size
+    build_single_resource(Igdb::Requester.get("companies/meta"), Igdb::CompanyRepresenter).size
   end
 
   def self.find(id)
-    build_single_resource(Igdb::Requester.get("companies/#{id}")['company'], CompanyRepresenter)
+    build_single_resource(Igdb::Requester.get("companies/#{id}")['company'], Igdb::CompanyRepresenter)
   end
 
   # Show games of a specific company
@@ -14,7 +14,7 @@ class Igdb::Company < Igdb::ApiResource
       hash['offset'] = opts[:offset] || 0
       hash['limit'] = opts[:limit] || 100
     end
-    build_for_collection(Igdb::Requester.get("companies/#{id}/games", params)['games'], CompanyRepresenter)
+    build_for_collection(Igdb::Requester.get("companies/#{id}/games", params)['games'], Igdb::CompanyRepresenter)
   end
 
 end

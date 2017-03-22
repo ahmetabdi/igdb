@@ -39,9 +39,9 @@ class Igdb::Requester
 
     def request_headers
       Hash.new.tap do |headers|
-        headers['Accept'] = 'application/json'
-        headers['Content-Type'] = 'application/json'
-        headers['Authorization'] = 'Token token="' + api.api_key + '"'
+        headers['Accept'] = 'text/json'
+        headers['Content-Type'] = 'text/json'
+        headers['X-Mashape-Key'] = api.api_key
       end
     end
 

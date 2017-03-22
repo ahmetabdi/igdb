@@ -2,69 +2,62 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/companies/2000
+    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/companies/2000/?fields=*
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - application/json
+      - text/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Type:
+      - text/json
+      X-Mashape-Key:
+      - "<X-Mashape-Key>"
+      Host:
+      - igdbcom-internet-game-database-v1.p.mashape.com
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Mon, 03 Aug 2015 07:57:57 GMT
       Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      - text/json
+      Date:
+      - Thu, 23 Mar 2017 00:35:43 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '7000'
+      X-Ratelimit-Requests-Remaining:
+      - '6998'
+      Content-Length:
+      - '1929'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d87a3c178a5e8f01f9fa9f2f5bc0423611438588676; expires=Tue, 02-Aug-16
-        07:57:56 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"8e706da68af82f8595867da187d9bc80"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1c9c6ae6-7a02-474a-a5a2-4c2d0bd8c766
-      X-Runtime:
-      - '0.133061'
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 2100797d90430a8a-LHR
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAUfv1UA/yzKQQqAIBSE4avErA2kpduCjhFDigT2ErUgortn1HL+by7M
-        2xopJ8yFxcJ0WmsF4epg0LM0A609m7GGDIUcdl9hZmntC63/gYdL9G5KLIvU
-        i+whKEQmJ+Vb9/0AAAD//wMAozAHDG0AAAA=
-    http_version:
-  recorded_at: Mon, 03 Aug 2015 07:57:57 GMT
+      encoding: UTF-8
+      string: '[{"id":2000,"name":"Cat Daddy Games","created_at":1390437200564,"updated_at":1488659390415,"slug":"cat-daddy-games","url":"https://www.igdb.com/companies/cat-daddy-games","logo":{"url":"//images.igdb.com/igdb/image/upload/t_thumb/a32yvi5xzurmxbijgxz6.png","cloudinary_id":"a32yvi5xzurmxbijgxz6","width":500,"height":500},"description":"Cat
+        Daddy Games, L.L.C. is a video game developer based in Kirkland, Washington
+        that has developed games for publishers Take-Two Interactive, Activision,
+        Electronic Arts, Sierra Entertainment, and Microsoft. Harley Howe and Pat
+        Wilkinson created Cat Daddy in 1996 and started developing several well-known
+        Tycoon series of games and its production of casual titles. Cat Daddy is currently
+        a wholly owned subsidiary of Take-Two Interactive Software, Inc. and is best
+        known for its Carnival series of games for the Wii, Nintendo DS and Xbox 360.\n\nCat
+        Daddy had a hit with the release of Carnival Games for both the Wii and Nintendo
+        DS, with the former shipping over 7 million copies worldwide, making it one
+        of the biggest titles for the Wii, and was certified Platinum. Carnival Games:
+        Mini-Golf was released in 2008, to similar numbers. A true sequel, New Carnival
+        Games was released on September 21, 2010. In 2011, Cat Daddy Games did their
+        first Kinect game, Monkey See Monkey Do Carnival Games, the following year
+        in 2012 produced their first Nintendo 3DS game: Carnival Games Wild West 3D
+        and Let''s Cheer! for Kinect.\n\nThe studio is focused on mobile titles, recently
+        releasing Comedy Central''s Indecision Game, House Pest starring Fiasco the
+        Cat, Gridblock and Herd, Herd, Herd for iPhone, iPad &amp; Android.","start_date":851990400000,"start_date_category":2,"country":840,"website":"http://www.catdaddy.com/","parent":5982,"change_date_category":7,"twitter":"https://twitter.com/catdaddygames","published":[4718],"developed":[27619,4057,4056,4058,4800,6151,8542,9203,21626,21625]}]'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 00:35:44 GMT
 recorded_with: VCR 2.9.3

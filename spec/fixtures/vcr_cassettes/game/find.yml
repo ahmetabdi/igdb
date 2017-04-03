@@ -2,78 +2,90 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/games/2000
+    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/games/2000/?fields=*
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - application/json
+      - text/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Type:
+      - text/json
+      X-Mashape-Key:
+      - "<X-Mashape-Key>"
+      Host:
+      - igdbcom-internet-game-database-v1.p.mashape.com
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Wed, 29 Jul 2015 12:31:04 GMT
       Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      - text/json
+      Date:
+      - Thu, 23 Mar 2017 00:35:44 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '7000'
+      X-Ratelimit-Requests-Remaining:
+      - '6996'
+      Content-Length:
+      - '2015'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dc64f5c5e53f609bb896cd00f8090b0d91438173063; expires=Thu, 28-Jul-16
-        12:31:03 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"928298c6ddb208eb84c62d541d2c62d2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - fc5fbc5e-103b-49f7-b259-2e2789fd6559
-      X-Runtime:
-      - '0.142812'
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 20d8d6b1ab070a72-LHR
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAIjHuFUA/5xTzYrbMBB+lUFn5x9akluXQCl0S9i07KFbjCJN7CmyxpXk
-        hBDyUn2EPllHtjel0FNPZsbffD/j8VVVukG1uSqyarOcz+eF8n1H7Tgm7VSh
-        ousqqdt73TWNDpc7BCiChtiFE52kqjkEDtLkBlMgA6mmYCcthsgeYs2cMMCJ
-        LDJkcbB4QsctWjhc4KnznnwFz5Rq2BuKkYPQewttd3AU6xFGreFg4b0QRCAP
-        i/X67RTeQcQfHTpILLLY8xcw2Pz1s4CzjhDQoY5CI1MSeDWFLQU0STx/OSM8
-        sJMMgjtwV9Wpp2n4RAiBpI5wFGBuRgyEsei9ZXwb2HZGeDUcyTXAxwGWI+aV
-        ZnePOpg6qy7ExmR08ooczBrtnJCMq925TiTIG9fZnvpF7Vs0JK+26OiE4fKi
-        QFs7YS+fpkIfMKrN1+vrV9wP+1a3b4Ua9Uqr0whqnU6SpylH9COZwJGPSfbv
-        LZ+j+ntKIHnRk/l6spr3nIbFg7TrlNq4mc2oqYz1U6rsYWq4kVpXGGc5W5wN
-        JzQ+yn60THXXHEqdyjwivWb6va3ylZmA6OVc0mC1x/2f0B+qUW25Wrz5h2Si
-        5HLED76/y/19rE/aX+zoZQR+DpqcxC9Ul38ftdRP/On88Xm3zcu53X4DAAD/
-        /wMATjAue14DAAA=
-    http_version:
-  recorded_at: Wed, 29 Jul 2015 12:31:04 GMT
+        W3siaWQiOjIwMDAsIm5hbWUiOiJQb3N0YWwiLCJzbHVnIjoicG9zdGFsIiwi
+        dXJsIjoiaHR0cHM6Ly93d3cuaWdkYi5jb20vZ2FtZXMvcG9zdGFsIiwiY3Jl
+        YXRlZF9hdCI6MTM2NDU3MzY4Njc3NiwidXBkYXRlZF9hdCI6MTQ4NTAxNDYw
+        NDQzNSwic3VtbWFyeSI6IlBvc3RhbCBpcyBhIHN1cnZpdmFsIGhvcnJvciBp
+        c29tZXRyaWMgdGhpcmQtcGVyc29uIHNob290ZXIgdmlkZW8gZ2FtZSBkZXZl
+        bG9wZWQgYnkgUnVubmluZyBXaXRoIFNjaXNzb3JzIGFuZCBwdWJsaXNoZWQg
+        YnkgUmlwY29yZCBHYW1lcyBpbiAxOTk3LiBBIHNlcXVlbCB0byB0aGUgZ2Ft
+        ZSwgUG9zdGFswrIsIHdhcyByZWxlYXNlZCBpbiAyMDAzLiBEaXJlY3RvciBV
+        d2UgQm9sbCBoYXMgYm91Z2h0IHRoZSBtb3ZpZSByaWdodHMgZm9yIHRoZSBz
+        ZXJpZXMsIGFuZCBoYXMgcHJvZHVjZWQgYSBmaWxtIG9mIHRoZSBzYW1lIG5h
+        bWUuIEEgTWFyY2ggMjAwMSByZS1yZWxlYXNlIG9mIHRoZSBnYW1lLCBjYWxs
+        ZWQgUG9zdGFsIFBsdXMsIGluY2x1ZGVkIGEgXCJTcGVjaWFsIERlbGl2ZXJ5
+        XCIgYWRkLW9uIiwic3RvcnlsaW5lIjoiVGhlcmUgaXMgbm8gcGxvdCBhcyBz
+        dWNoLiBUaGUgcHJlc2VuY2Ugb2YgYSBtb3ZpbmcgdmFuIG9uIHRoZSBmaXJz
+        dCBsZXZlbCBzdWdnZXN0cyB0aGF0IHRoZSBQb3N0YWwgRHVkZSBoYXMgYmVl
+        biBldmljdGVkIGZyb20gaGlzIGhvbWUgYW5kIGlzIHRoZXJlZm9yZSBcImdv
+        aW5nIHBvc3RhbFwiLCBidXQgbm8gYmFja2dyb3VuZCBzdG9yeSBldm9sdmVz
+        IGR1cmluZyB0aGUgZ2FtZS4gSG93ZXZlciwgdGhlIG1hbnVhbCBoaW50cyB0
+        aGF0IHRoZSBQb3N0YWwgRHVkZSBiZWxpZXZlcyBoaW1zZWxmIHRvIGJlIHRh
+        cmdldGVkIGJ5IHRoZSB0b3duLCBhbmQgaW4tYmV0d2VlbiBsZXZlbHMsIHBs
+        YXllcnMgYXJlIGdpdmVuIGEgY2hhbmNlIHRvIGRlbHZlIGludG8gaGlzIHBz
+        eWNob3NpcyB3aXRoIG9taW5vdXMgZGlhcnkgZW50cmllcyBjb250YWluaW5n
+        IHBocmFzZXMgbGlrZSBcIlRoZSBlYXJ0aCBpcyBodW5ncnkuIEl0cyBoZWFy
+        dCB0aHJvYnMgYW5kIGRlbWFuZHMgY2xlYW5zaW5nLiBUaGUgZWFydGggaXMg
+        YWxzbyB0aGlyc3R5Li4uXCIuIFRoZSBnYW1lIGVuZHMgd2l0aCB0aGUgUG9z
+        dGFsIER1ZGUgYXR0ZW1wdGluZyB0byBtYXNzYWNyZSBhbiBlbGVtZW50YXJ5
+        IHNjaG9vbCwgYnV0IGZhaWxpbmcgZHVlIHRvIGhhdmluZyBhIG1lbnRhbCBi
+        cmVha2Rvd24gYW5kIGVuZGluZyB1cCBnZXR0aW5nIGNhcHR1cmVkIGJ5IHRo
+        ZSBnb3Zlcm5tZW50IGFuZCBpbmNhcmNlcmF0ZWQgaW4gYW4gYXN5bHVtLiIs
+        ImNvbGxlY3Rpb24iOjM3MSwicmF0aW5nIjo2My42ODYwNDI4ODQ1NjI3LCJw
+        b3B1bGFyaXR5IjoxLjAwMDA2NjU2MDE3MDM5LCJyYXRpbmdfY291bnQiOjE0
+        LCJjYXRlZ29yeSI6MCwicGxheWVyX3BlcnNwZWN0aXZlcyI6WzNdLCJnYW1l
+        X21vZGVzIjpbMV0sImtleXdvcmRzIjpbMTQwXSwiZ2VucmVzIjpbNV0sImZp
+        cnN0X3JlbGVhc2VfZGF0ZSI6ODc1NTc3NjAwMDAwLCJyZWxlYXNlX2RhdGVz
+        IjpbeyJjYXRlZ29yeSI6NSwicGxhdGZvcm0iOjYsImRhdGUiOjg3NTU3NzYw
+        MDAwMCwiaHVtYW4iOiIxOTk3LVEzIiwieSI6MTk5NywibSI6OX1dLCJzY3Jl
+        ZW5zaG90cyI6W3sidXJsIjoiLy9pbWFnZXMuaWdkYi5jb20vaWdkYi9pbWFn
+        ZS91cGxvYWQvdF90aHVtYi91bXQ4b3Y2Zm91Z3duaWJwOW5kcy5wbmciLCJj
+        bG91ZGluYXJ5X2lkIjoidW10OG92NmZvdWd3bmlicDluZHMiLCJ3aWR0aCI6
+        MjU5LCJoZWlnaHQiOjE5NH1dLCJ2aWRlb3MiOlt7Im5hbWUiOiJUcmFpbGVy
+        IiwidmlkZW9faWQiOiIyYVJvTndMV1BEMCJ9XSwiY292ZXIiOnsidXJsIjoi
+        Ly9pbWFnZXMuaWdkYi5jb20vaWdkYi9pbWFnZS91cGxvYWQvdF90aHVtYi9h
+        ejQ5bm5hNWdibG1yc2xtdDF0bi5wbmciLCJjbG91ZGluYXJ5X2lkIjoiYXo0
+        OW5uYTVnYmxtcnNsbXQxdG4iLCJ3aWR0aCI6MTk5LCJoZWlnaHQiOjI1M30s
+        ImVzcmIiOnsic3lub3BzaXMiOiIiLCJyYXRpbmciOjZ9fV0=
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 00:35:44 GMT
 recorded_with: VCR 2.9.3

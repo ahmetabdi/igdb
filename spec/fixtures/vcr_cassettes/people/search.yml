@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/people/?fields=*&search=batman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Type:
+      - text/json
+      X-Mashape-Key:
+      - "<X-Mashape-Key>"
+      Host:
+      - igdbcom-internet-game-database-v1.p.mashape.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/json
+      Date:
+      - Thu, 23 Mar 2017 00:35:47 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '7000'
+      X-Ratelimit-Requests-Remaining:
+      - '6989'
+      Content-Length:
+      - '2116'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":66963,"name":"Kyle \"Batman9502\" Duffy","created_at":1429561797246,"updated_at":1429561797275,"slug":"kyle-batman9502-duffy","url":"https://www.igdb.com/people/kyle-batman9502-duffy","gender":0,"games":[7886]},{"id":102736,"name":"Christina
+        Batman","created_at":1448840944619,"updated_at":1448840944680,"slug":"christina-batman","url":"https://www.igdb.com/people/christina-batman","gender":0,"voice_acted":[7208],"characters":[6431]},{"id":102737,"name":"Geoffrey
+        Batman","created_at":1448840944752,"updated_at":1448840944815,"slug":"geoffrey-batman","url":"https://www.igdb.com/people/geoffrey-batman","gender":0,"voice_acted":[7208],"characters":[6431]},{"id":15512,"name":"Peter
+        Bateman","created_at":1409444018399,"updated_at":1409444018399,"slug":"peter-bateman","url":"https://www.igdb.com/people/peter-bateman","gender":0,"games":[538,2003,3025]},{"id":5689,"name":"Greg
+        Bauman","created_at":1389457861534,"updated_at":1463521213368,"slug":"greg-bauman","url":"https://www.igdb.com/people/greg-bauman","gender":0,"games":[5,14,832]},{"id":949,"name":"Sarah
+        Boatman","created_at":1384459837480,"updated_at":1384459837480,"slug":"sarah-boatman","url":"https://www.igdb.com/people/sarah-boatman","gender":0,"games":[99]},{"id":8736,"name":"Adam
+        Bauman","created_at":1397327033169,"updated_at":1431266888916,"slug":"adam-bauman","url":"https://www.igdb.com/people/adam-bauman","gender":0,"voice_acted":[478,3247],"games":[1979],"characters":[1455,4475]},{"id":39568,"name":"Geoffrey
+        Bateman","created_at":1414845340193,"updated_at":1414845340193,"slug":"geoffrey-bateman","url":"https://www.igdb.com/people/geoffrey-bateman","gender":0,"voice_acted":[6072],"characters":[2480]},{"id":27252,"name":"Brent
+        Bateman","created_at":1410985263794,"updated_at":1410985263794,"slug":"brent-bateman","url":"https://www.igdb.com/people/brent-bateman","gender":0,"voice_acted":[1020],"games":[1020],"characters":[1036]},{"id":23315,"name":"Scott
+        Bauman","created_at":1410705567317,"updated_at":1442783647514,"slug":"scott-bauman","url":"https://www.igdb.com/people/scott-bauman","gender":0,"games":[1342,1940,7316]}]'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 00:35:48 GMT
+recorded_with: VCR 2.9.3

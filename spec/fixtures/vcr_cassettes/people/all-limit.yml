@@ -2,71 +2,67 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/people?limit=5&offset=0
+    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/people/?fields=*&limit=5&offset=0
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - application/json
+      - text/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Type:
+      - text/json
+      X-Mashape-Key:
+      - "<X-Mashape-Key>"
+      Host:
+      - igdbcom-internet-game-database-v1.p.mashape.com
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 31 Jul 2015 07:41:52 GMT
       Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      - text/json
+      Date:
+      - Thu, 23 Mar 2017 00:35:48 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '7000'
+      X-Ratelimit-Requests-Remaining:
+      - '6987'
+      Content-Length:
+      - '971'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d3ff9e221630381e395af77df910ed5b01438328511; expires=Sat, 30-Jul-16
-        07:41:51 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"0b5ef1c54a9bd6f646f4a82f018663b5"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 92032566-1ba2-4afe-a389-4e4c3c94ab38
-      X-Runtime:
-      - '0.077513'
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 20e7a9cf7dd30ce3-LHR
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAMAmu1UA/0zQsQ7CIBSF4Vchdy6L0US71hjj1M3BONy0aBEKBKgOTd9d
-        CC3tyH/y3YERDNNGMigfI/AWyl0BCvvwhtoy57Uid/TYo+KDgAKcHN5hM2mj
-        v3WbinRgnw+cmWUicu9W2cYYXYgLOawEv7wlF5RCMbtBMdPXnBd2zOymFfoO
-        Fam0Nlv4mQfapGGhp0yrznJHrhi+IKsmNtrFNj2nPwAAAP//AwDq3B3OIwEA
-        AA==
-    http_version:
-  recorded_at: Fri, 31 Jul 2015 07:41:52 GMT
+        W3siaWQiOjEwMDkyMywibmFtZSI6Ikplbm55IE1hcnRpbiIsImNyZWF0ZWRf
+        YXQiOjE0NDc1MDYwMjUxOTIsInVwZGF0ZWRfYXQiOjE0NDc1MDYwMjUyNDMs
+        InNsdWciOiJqZW5ueS1tYXJ0aW4iLCJ1cmwiOiJodHRwczovL3d3dy5pZ2Ri
+        LmNvbS9wZW9wbGUvamVubnktbWFydGluIiwiZ2VuZGVyIjowLCJnYW1lcyI6
+        WzIyM119LHsiaWQiOjEwMDkyMiwibmFtZSI6IsOJcmljIFdhcmluIiwiY3Jl
+        YXRlZF9hdCI6MTQ0NzUwNjAyNTE4NCwidXBkYXRlZF9hdCI6MTQ0NzUwNjAy
+        NTI3Miwic2x1ZyI6ImVyaWMtd2FyaW4iLCJ1cmwiOiJodHRwczovL3d3dy5p
+        Z2RiLmNvbS9wZW9wbGUvZXJpYy13YXJpbiIsImdlbmRlciI6MCwiZ2FtZXMi
+        Ols4MzZdfSx7ImlkIjoxMDA5MjEsIm5hbWUiOiJDaXNjbyBMb3Blei1GcmVz
+        cXVldCIsImNyZWF0ZWRfYXQiOjE0NDc1MDYwMjUwMjksInVwZGF0ZWRfYXQi
+        OjE0NDc1MDYwMjUwODYsInNsdWciOiJjaXNjby1sb3Blei1mcmVzcXVldCIs
+        InVybCI6Imh0dHBzOi8vd3d3LmlnZGIuY29tL3Blb3BsZS9jaXNjby1sb3Bl
+        ei1mcmVzcXVldCIsImdlbmRlciI6MCwiZ2FtZXMiOlsyMjNdfSx7ImlkIjox
+        MDA5MjAsIm5hbWUiOiJGcmFuayBMZSBRdWF5IiwiY3JlYXRlZF9hdCI6MTQ0
+        NzUwNjAyNDc2MywidXBkYXRlZF9hdCI6MTQ0NzUwNjAyNDkzMiwic2x1ZyI6
+        ImZyYW5rLWxlLXF1YXkiLCJ1cmwiOiJodHRwczovL3d3dy5pZ2RiLmNvbS9w
+        ZW9wbGUvZnJhbmstbGUtcXVheSIsImdlbmRlciI6MCwiZ2FtZXMiOlsyMjNd
+        fSx7ImlkIjoxMDA5MTksIm5hbWUiOiJUYW5pYSBCdXJlYXUtQ2l2aWwiLCJj
+        cmVhdGVkX2F0IjoxNDQ3NTA2MDI0NjE1LCJ1cGRhdGVkX2F0IjoxNDQ3NTA2
+        MDI0NjcyLCJzbHVnIjoidGFuaWEtYnVyZWF1LWNpdmlsIiwidXJsIjoiaHR0
+        cHM6Ly93d3cuaWdkYi5jb20vcGVvcGxlL3RhbmlhLWJ1cmVhdS1jaXZpbCIs
+        ImdlbmRlciI6MCwiZ2FtZXMiOls4MzZdfV0=
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 00:35:49 GMT
 recorded_with: VCR 2.9.3

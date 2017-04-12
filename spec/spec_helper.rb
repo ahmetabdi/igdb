@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.start
 
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
-require 'igdb-api'
+require 'igdb_api'
 require 'vcr'
 
 RSpec.configure do |c|

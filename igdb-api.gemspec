@@ -4,17 +4,17 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'igdb/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'igdb-api'
+  spec.name          = 'igdb_api'
   spec.version       = Igdb::VERSION
   spec.authors       = ['Leigh West']
   spec.email         = ['iamtastycake@gmail.com']
 
   spec.summary       = 'A Ruby wrapper for the Internet Game Database API.'
   spec.description   = ''
-  spec.homepage      = 'https://github.com/tastycake/igdb-api'
+  spec.homepage      = 'https://github.com/tastycake/igdb_api'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['README.md', 'igdb-api.gemspec', 'lib/**/*']
+  spec.files         = Dir['README.md', 'igdb_api.gemspec', 'lib/**/*']
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']

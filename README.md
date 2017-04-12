@@ -1,8 +1,7 @@
 # IGDB: Internet Game Database
-[![Build Status](https://travis-ci.org/tastycake/igdb-api.svg?branch=master)](https://travis-ci.org/tastycake/igdb-api)
-[![Code Climate](https://codeclimate.com/github/tastycake/igdb-api/badges/gpa.svg)](https://codeclimate.com/github/tastycake/igdb-api)
-[![Test Coverage](https://codeclimate.com/github/tastycake/igdb-api/badges/coverage.svg)](https://codeclimate.com/github/tastycake/igdb-api/coverage)
-[![Dependency Status](https://gemnasium.com/ahmetabdi/igdb.svg)](https://gemnasium.com/ahmetabdi/igdb)
+[![Build Status](https://travis-ci.org/tastycake/igdb_api.svg?branch=master)](https://travis-ci.org/tastycake/igdb_api)
+[![Code Climate](https://codeclimate.com/github/tastycake/igdb_api/badges/gpa.svg)](https://codeclimate.com/github/tastycake/igdb_api)
+[![Test Coverage](https://codeclimate.com/github/tastycake/igdb_api/badges/coverage.svg)](https://codeclimate.com/github/tastycake/igdb_api/coverage)
 
 ![Banner](http://orig08.deviantart.net/b5c1/f/2011/204/b/9/umvc3_roster_by_kiradaidohji-d41fyaq.png)
 
@@ -67,7 +66,7 @@ $ Igdb::Company.find('2000').games
 ```
 ## Contributing
 
-1. Fork it ( https://github.com/tastycake/igdb-api/fork )
+1. Fork it ( https://github.com/tastycake/igdb_api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

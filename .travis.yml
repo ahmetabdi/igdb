@@ -3,7 +3,7 @@ rvm:
   - 2.2.2
 addons:
   code_climate:
-    repo_token: 530196343faab92880c172e2a3bbd2f56e8077a37247a1f918817b4972ebf2c3
+    repo_token: dfde3ea1f13524298878000db6943cb43bf37d9f3485b6f15392133157122853
 script: bundle exec rspec spec
 after_success:
   - bundle exec codeclimate-test-reporter

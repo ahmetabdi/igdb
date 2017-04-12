@@ -7,7 +7,7 @@
 
 ## Installation
 ```ruby
-$ gem install igdb
+$ gem install igdb_api
 ```
 ## Usage
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/people?limit=100&offset=0
+    uri: https://api-2445582011268.apicast.io/people?limit=100&offset=0
     body:
       encoding: US-ASCII
       string: ''

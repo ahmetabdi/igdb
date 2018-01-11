@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/companies/meta
+    uri: https://api-2445582011268.apicast.io/companies/meta
     body:
       encoding: US-ASCII
       string: ''

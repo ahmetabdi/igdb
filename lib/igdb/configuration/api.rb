@@ -7,7 +7,7 @@ module Igdb::Configuration
     attr_reader :base_url, :version, :api_key
 
     def initialize
-      self.base_url = "https://www.igdb.com/api/v1/".freeze
+      self.base_url = "https://api-2445582011268.apicast.io".freeze
       self.version = 1.freeze
     end
 

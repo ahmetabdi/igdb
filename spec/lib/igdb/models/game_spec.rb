@@ -10,6 +10,7 @@ describe Igdb::Game do
   describe "public class methods" do
     context "responds to its methods" do
       it { expect(subject).to respond_to(:meta) }
+      it { expect(subject).to respond_to(:count) }
       it { expect(subject).to respond_to(:find) }
       it { expect(subject).to respond_to(:search) }
       it { expect(subject).to respond_to(:all) }
@@ -19,8 +20,17 @@ describe Igdb::Game do
       context "self.meta" do
         let(:game) { VCR.use_cassette("game/meta") { subject.meta } }
 
-        it "return the number of games in the database" do
+        it "return the fields of game" do
+          puts game
           expect(game).to eq(11321)
+        end
+      end
+      
+      context "self.count" do
+        let(:game) { VCR.use_cassette("game/count") { subject.count } }
+
+        it "return the number of games in the database" do
+          expect(game).to be >= 78945
         end
       end
 

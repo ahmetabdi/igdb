@@ -1,6 +1,44 @@
 require 'representable/json'
+require 'ostruct'
 
 class Igdb::ApiResource < OpenStruct
+  class << self
+    attr_accessor :path
+    attr_accessor :representer
+    
+    def count
+      Igdb::Requester.get("#{self.path}/count")['count']
+    end
+    
+    def meta
+      build_single_resource(Igdb::Requester.get('companies/meta'), Igdb::CompanyRepresenter).size
+    end
+  
+    def find(id)
+      params = { fields: '*' }
+      build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
+    end
+
+    def search(opts={})
+      params = Hash.new.tap do |hash|
+        hash['search'] = opts[:query] if opts[:query]
+        hash['filters'] = opts[:filters] if opts[:filters]
+        hash['fields'] = '*'
+      end
+      
+      build_collection(Igdb::Requester.get(path, params), representer)
+    end
+  
+    def all(opts={})
+      params = Hash.new.tap do |hash|
+        hash['offset'] = opts[:offset] || 0
+        hash['limit'] = opts[:limit] || 50
+        hash['fields'] = '*'
+      end
+      
+      build_collection(Igdb::Requester.get(path, params), self.representer)
+    end
+  end
 
   private
   def self.build_single_resource(response, representer)

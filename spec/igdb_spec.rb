@@ -14,7 +14,7 @@ describe Igdb do
     end
 
     it "should have a base url" do
-      expect(subject.base_url).to eq('https://www.igdb.com/api/v1/')
+      expect(subject.base_url).to eq('https://api-2445582011268.apicast.io')
     end
 
     it "should have a API key" do

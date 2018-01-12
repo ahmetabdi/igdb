@@ -11,12 +11,20 @@ class Igdb::ApiResource < OpenStruct
     end
     
     def meta
-      build_single_resource(Igdb::Requester.get('companies/meta'), Igdb::CompanyRepresenter).size
+      Igdb::Requester.get("#{self.path}/meta")
     end
   
-    def find(id)
-      params = { fields: '*' }
+    def find(id, options = {})
+      params = options
+      params[:fields] = '*' unless params[:fields]
       build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
+    end
+    
+    def slug(id, options = {})
+      params = options
+      params[:fields] = '*' unless params[:fields]
+      params[:'filter[slug][eq]'] = id
+      build_single_resource(Igdb::Requester.get("#{path}/", params)[0], representer)
     end
 
     def search(opts={})
@@ -26,7 +34,7 @@ class Igdb::ApiResource < OpenStruct
         hash['fields'] = '*'
       end
       
-      build_collection(Igdb::Requester.get(path, params), representer)
+      build_collection(Igdb::Requester.get("#{path}/", params), representer)
     end
   
     def all(opts={})
@@ -36,11 +44,12 @@ class Igdb::ApiResource < OpenStruct
         hash['fields'] = '*'
       end
       
-      build_collection(Igdb::Requester.get(path, params), self.representer)
+      build_collection(Igdb::Requester.get("#{path}/", params), self.representer)
     end
   end
 
   private
+  
   def self.build_single_resource(response, representer)
     self.new.extend(representer).from_hash(response)
   end

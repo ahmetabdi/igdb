@@ -1,16 +1,14 @@
 # IGDB: Internet Game Database
-[![Circle CI](https://circleci.com/gh/ahmetabdi/igdb.svg?style=svg)](https://circleci.com/gh/ahmetabdi/igdb)
-[![Build Status](https://travis-ci.org/ahmetabdi/igdb.svg)](https://travis-ci.org/ahmetabdi/igdb)
-[![Code Climate](https://codeclimate.com/github/ahmetabdi/igdb/badges/gpa.svg)](https://codeclimate.com/github/ahmetabdi/igdb)
-[![Test Coverage](https://codeclimate.com/github/ahmetabdi/igdb/badges/coverage.svg)](https://codeclimate.com/github/ahmetabdi/igdb/coverage)
-[![Gem Version](https://badge.fury.io/rb/igdb.svg)](http://badge.fury.io/rb/igdb)
-[![Dependency Status](https://gemnasium.com/ahmetabdi/igdb.svg)](https://gemnasium.com/ahmetabdi/igdb)
-
-![Banner](http://orig08.deviantart.net/b5c1/f/2011/204/b/9/umvc3_roster_by_kiradaidohji-d41fyaq.png)
+[![CircleCI](https://circleci.com/gh/kalynrobinson/igdb.svg?style=svg)](https://circleci.com/gh/kalynrobinson/igdb)
+[![Build Status](https://travis-ci.org/kalynrobinson/igdb.svg?branch=master)](https://travis-ci.org/kalynrobinson/igdb)
+[![Maintainability](https://api.codeclimate.com/v1/badges/dd41fd1ba6674f21b20c/maintainability)](https://codeclimate.com/github/kalynrobinson/igdb/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/dd41fd1ba6674f21b20c/test_coverage)](https://codeclimate.com/github/kalynrobinson/igdb/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/igdb2.svg)](http://badge.fury.io/rb/igdb2)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/kalynrobinson/igdb.svg)](https://beta.gemnasium.com/projects/github.com/kalynrobinson/igdb)
 
 ## Installation
 ```ruby
-$ gem install igdb
+$ gem install igdb2
 ```
 ## Usage
 
@@ -81,7 +79,7 @@ Igdb::Version
 ```
 ## Contributing
 
-1. Fork it ( https://github.com/ahmetabdi/igdb/fork )
+1. Fork it ( https://github.com/kalynrobinson/igdb/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

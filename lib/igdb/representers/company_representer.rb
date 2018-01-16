@@ -1,11 +1,16 @@
 require 'ostruct'
+require 'representable/json'
 
-# URL path: /companies/
-# Video game companies. Both publishers & developers
-module Igdb::CompanyRepresenter
-  include Igdb::Representer
+class Igdb::CompanyRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
-  property :logo, extend: Igdb::ImageRepresenter, class: OpenStruct 
+  property :logo 
   property :description
   property :country
   property :website
@@ -16,6 +21,6 @@ module Igdb::CompanyRepresenter
   property :change_date_category
   property :twitter
   
-  collection :published, extend: Igdb::GameRepresenter, class: Igdb::Game
-  collection :developed, extend: Igdb::GameRepresenter, class: Igdb::Game
+  collection :published
+  collection :developed
 end

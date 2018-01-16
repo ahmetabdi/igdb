@@ -1,4 +1,4 @@
-class Igdb::Credit < Igdb::ApiResource
+class Igdb::Credits < Igdb::ApiResource
     @path = 'credits'
-    @representer = Igdb::CreditRepresenter
+    @representer = Igdb::CreditsRepresenter
 end

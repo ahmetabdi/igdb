@@ -1,7 +1,13 @@
-# URL path: /franchises/
-# A list of video game franchises such as Star Wars.
-module Igdb::FranchiseRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::FranchiseRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
-  collection :games, extend: Igdb::GameRepresenter, class: Igdb::Game
+  collection :games
 end

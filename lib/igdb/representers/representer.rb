@@ -1,6 +1,6 @@
-# URL path: /game_engines/
-# Video game engines such as unreal engine.
-module Igdb::Representer
+require 'representable/json'
+
+class Igdb::Representer < Representable::Decorator
   include Representable::JSON
 
   property :id # The id of the character.
@@ -9,8 +9,4 @@ module Igdb::Representer
   property :url # 
   property :created_at
   property :updated_at
-  
-  def self.included(base)
-    base.include Representable::JSON
-  end
 end

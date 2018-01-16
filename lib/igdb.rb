@@ -10,7 +10,7 @@ module Igdb
   autoload :Character, 'igdb/models/character'
   autoload :Collection, 'igdb/models/collection'
   autoload :Company, 'igdb/models/company'
-  autoload :Credit, 'igdb/models/credits'
+  autoload :Credits, 'igdb/models/credits'
   autoload :Feed, 'igdb/models/feed'
   autoload :Franchise, 'igdb/models/franchise'
   autoload :Game, 'igdb/models/game'
@@ -34,6 +34,7 @@ module Igdb
   autoload :Video, 'igdb/models/video'
 
   #Presenters
+  autoload :Representer, 'igdb/representers/representer'
   autoload :AlternativeNameRepresenter, 'igdb/representers/alternative_name_representer'
   autoload :CharacterRepresenter, 'igdb/representers/character_representer'
   autoload :CollectionRepresenter, 'igdb/representers/collection_representer'
@@ -55,16 +56,15 @@ module Igdb
   autoload :PulseRepresenter, 'igdb/representers/pulse_representer'
   autoload :PulseSourceRepresenter, 'igdb/representers/pulse_source_representer'
   autoload :ReleaseDateRepresenter, 'igdb/representers/release_date_representer'
-  autoload :Representer, 'igdb/representers/representer'
   autoload :ReviewRepresenter, 'igdb/representers/review_representer'
   autoload :ThemeRepresenter, 'igdb/representers/theme_representer'
   autoload :TitleRepresenter, 'igdb/representers/title_representer'
   autoload :VersionRepresenter, 'igdb/representers/version_representer'
   autoload :VideoRepresenter, 'igdb/representers/video_representer'
 
-  def self.connect(api_key)
+  def self.connect(api_key=ENV['IGDB_KEY'])
     Igdb::Configuration::Api.instance.tap do |api|
-      api.connect(api_key || '070702fa7336d87a8cdd509beb23e2f4')
+      api.connect(api_key)
     end
   end
 end

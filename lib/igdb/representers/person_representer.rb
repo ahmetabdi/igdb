@@ -1,11 +1,17 @@
-# URL path: /people/
-# Individuals who are in the video games industry
-module Igdb::PersonRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::PersonRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
 
   property :mug_shot
   
-  collection :games, extend: Igdb::GameRepresenter, class: Igdb::Game
-  collection :characters, extend: Igdb::CharacterRepresenter, class: Igdb::Character
-  collection :voice_acted, extend: Igdb::GameRepresenter, class: Igdb::Game
+  collection :games
+  collection :characters
+  collection :voice_acted
 end

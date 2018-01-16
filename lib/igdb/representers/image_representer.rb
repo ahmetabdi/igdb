@@ -1,5 +1,6 @@
-module Igdb::ImageRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::ImageRepresenter < Igdb::Representer
 
   property :url
   property :cloudinary_id

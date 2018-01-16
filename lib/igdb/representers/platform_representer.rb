@@ -1,13 +1,19 @@
-# URL path: /platforms/
-# The hardware used to run the game or game delivery network
-module Igdb::PlatformRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::PlatformRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
 
   property :logo
   property :summary
   property :alternative_name
   property :generation
   
-  collection :games, extend: Igdb::GameRepresenter, class: Igdb::Game
-  collection :versions, extend: Igdb::VersionRepresenter, class: Igdb::Version
+  collection :games
+  collection :versions
 end

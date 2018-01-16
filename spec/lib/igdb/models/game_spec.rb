@@ -1,10 +1,11 @@
 require 'spec_helper'
+require 'pp'
 
 describe Igdb::Game do
   subject { described_class }
 
   before do
-    Igdb.connect('egBf')
+    Igdb.connect(ENV['IGDB_KEY'])
   end
 
   describe "public class methods" do
@@ -21,16 +22,15 @@ describe Igdb::Game do
         let(:game) { VCR.use_cassette("game/meta") { subject.meta } }
 
         it "return the fields of game" do
-          puts game
-          expect(game).to eq(11321)
+          expect(game).to be_a Array
         end
       end
       
       context "self.count" do
         let(:game) { VCR.use_cassette("game/count") { subject.count } }
-
+        
         it "return the number of games in the database" do
-          expect(game).to be >= 78945
+          expect(game).to eq(79072)
         end
       end
 
@@ -38,7 +38,14 @@ describe Igdb::Game do
         let(:game) { VCR.use_cassette("game/find") { subject.find(2000) } }
 
         it "returns a game" do
-          expect(game).to be_a Igdb::Game
+        
+        puts '*' * 60
+        
+          expect(game).to be_a Igdb::GameRepresenter
+        end
+
+        it "returns the correct game" do
+          expect(game.represented.name).to eq('Postal')
         end
       end
 
@@ -48,7 +55,7 @@ describe Igdb::Game do
         it "returns a group of game results" do
           expect(game).to be_a Array
           expect(game).not_to be_empty
-          expect(game.first).to be_a Igdb::Game
+          expect(game.first).to be_a Igdb::GameRepresenter
         end
       end
 
@@ -60,7 +67,7 @@ describe Igdb::Game do
         it "returns a list of games" do
           expect(game).to be_a Array
           expect(game).not_to be_empty
-          expect(game.first).to be_a Igdb::Game
+          expect(game.first).to be_a Igdb::GameRepresenter
         end
 
         it "returns a limit" do

@@ -1,7 +1,15 @@
+require 'representable/json'
+
 # URL path: /collections/
 # Collection, AKA Series
-module Igdb::CollectionRepresenter
-  include Igdb::Representer
+class Igdb::CollectionRepresenter < Igdb::Representer
 
-  collection :games, extend: Igdb::GameRepresenter, class: Igdb::Game # List of games character appears in.
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
+
+  collection :games # List of games character appears in.
 end

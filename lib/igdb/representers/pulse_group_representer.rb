@@ -1,6 +1,7 @@
 # URL path: /pulse_groups/
-module Igdb::PulseGroupRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::PulseGroupRepresenter < Igdb::Representer
   
   property :id
   property :name
@@ -11,5 +12,5 @@ module Igdb::PulseGroupRepresenter
   property :game
   
   collection :tags
-  collection :pulses, extend: Igdb::PulseRepresenter, class: Igdb::Pulse
+  collection :pulses
 end

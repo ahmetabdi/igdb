@@ -1,5 +1,6 @@
-module Igdb::VideoRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::VideoRepresenter < Igdb::Representer
 
   property :name
   property :video_id

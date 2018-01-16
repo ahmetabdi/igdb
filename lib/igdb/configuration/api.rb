@@ -17,7 +17,7 @@ module Igdb::Configuration
 
     def url_for(action, params={})
       url = URI.join(base_url, action)
-      url.query = URI.encode_www_form(params) if params
+      url.query = URI.encode_www_form(params) unless params.empty?
       url.to_s
     end
 

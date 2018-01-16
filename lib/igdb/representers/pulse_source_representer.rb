@@ -1,6 +1,7 @@
 # URL path: /pulse_sources/
-module Igdb::PulseSourceRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::PulseSourceRepresenter < Igdb::Representer
   
   property :id
   property :name

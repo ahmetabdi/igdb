@@ -1,7 +1,13 @@
-# URL path: /feeds/
-# Feed items are a social feed of status updates, media and news articles.
-module Igdb::FeedRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::FeedRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
   property :content
   property :category

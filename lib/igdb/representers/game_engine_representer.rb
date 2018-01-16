@@ -1,11 +1,17 @@
-# URL path: /game_engines/
-# Video game engines such as unreal engine.
-module Igdb::GameEngineRepresenter
-  include Igdb::Representer
-  
-  property :logo, extend: Igdb::ImageRepresenter
+require 'representable/json'
 
-  collection :games, extend: Igdb::GameRepresenter, class: Igdb::Game
-  collection :companies, extend: Igdb::CompanyRepresenter, class: Igdb::Company
-  collection :platforms, extend: Igdb::PlatformRepresenter, class: Igdb::Platform
+class Igdb::GameEngineRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
+  
+  property :logo
+
+  collection :games
+  collection :companies
+  collection :platforms
 end

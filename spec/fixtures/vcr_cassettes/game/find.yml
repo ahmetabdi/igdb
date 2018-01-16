@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-2445582011268.apicast.io/games/2000
+    uri: https://api-2445582011268.apicast.io/games/2000?fields=*
     body:
       encoding: US-ASCII
       string: ''
@@ -11,69 +11,35 @@ http_interactions:
       - application/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Wed, 29 Jul 2015 12:31:04 GMT
+      Content-Encoding:
+      - gzip
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Date:
+      - Fri, 12 Jan 2018 18:02:30 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dc64f5c5e53f609bb896cd00f8090b0d91438173063; expires=Thu, 28-Jul-16
-        12:31:03 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"928298c6ddb208eb84c62d541d2c62d2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - fc5fbc5e-103b-49f7-b259-2e2789fd6559
-      X-Runtime:
-      - '0.142812'
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 20d8d6b1ab070a72-LHR
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAIjHuFUA/5xTzYrbMBB+lUFn5x9akluXQCl0S9i07KFbjCJN7CmyxpXk
-        hBDyUn2EPllHtjel0FNPZsbffD/j8VVVukG1uSqyarOcz+eF8n1H7Tgm7VSh
-        ousqqdt73TWNDpc7BCiChtiFE52kqjkEDtLkBlMgA6mmYCcthsgeYs2cMMCJ
-        LDJkcbB4QsctWjhc4KnznnwFz5Rq2BuKkYPQewttd3AU6xFGreFg4b0QRCAP
-        i/X67RTeQcQfHTpILLLY8xcw2Pz1s4CzjhDQoY5CI1MSeDWFLQU0STx/OSM8
-        sJMMgjtwV9Wpp2n4RAiBpI5wFGBuRgyEsei9ZXwb2HZGeDUcyTXAxwGWI+aV
-        ZnePOpg6qy7ExmR08ooczBrtnJCMq925TiTIG9fZnvpF7Vs0JK+26OiE4fKi
-        QFs7YS+fpkIfMKrN1+vrV9wP+1a3b4Ua9Uqr0whqnU6SpylH9COZwJGPSfbv
-        LZ+j+ntKIHnRk/l6spr3nIbFg7TrlNq4mc2oqYz1U6rsYWq4kVpXGGc5W5wN
-        JzQ+yn60THXXHEqdyjwivWb6va3ylZmA6OVc0mC1x/2f0B+qUW25Wrz5h2Si
-        5HLED76/y/19rE/aX+zoZQR+DpqcxC9Ul38ftdRP/On88Xm3zcu53X4DAAD/
-        /wMATjAue14DAAA=
-    http_version:
-  recorded_at: Wed, 29 Jul 2015 12:31:04 GMT
-recorded_with: VCR 2.9.3
+        H4sIAAAAAAAC/61W3W6kNhR+FYtrwgAzwMzctYrUVmqr7e5We7FZjQx4wBmwiW0gdJWX6iP0yfodmCSjbdKLVe6wfX6+852PY3/+6snS28dhGPqe4q3w9t47bR1vPN+zTV9h3T2ue9NgWTvX2f1qNY5jIKsyDwrdriq42tWTZWEEd6I8cOfto3W6SbJ1uk2zLEWQrnw+SqIozjY4TMMI+fq25WZ6gsCkZZzZ3gxywKrWxmiDTd0KZ2TBXC1NedUJY7VittbaCcMGWQrNCA8rxSAa3YmS5RN73yslVcU+SVezD4W0VhuEVyXr+ryRtj6bya7QpmQ/UUFMKhbtdlnAfmBW3PWiYU4jrZjj+2yB+c/fPhu5ZUY0gluEgRcIXQfsWhpROGD+cxTsR92gBtjluq9qN4dp9SAFMxJry44wpE0rjBTWn7GRfWd02ReIy9lRNi3Tx8WMSqSWEbrfuClqyhoBxtUZyaPlArbgTYMgZ2rfNT1SSFU0fTmHvvE+dKKQOLoWjRyEmW48xsvySiuSAqqYGqlIHx9rYQT1RmnWNdoxYLR9UQcMJ0ArrFDFnJzPBYL0gSuGHhGYozTWsYZaA6+qEhalu5ovhJzRXQPUwpUQiolBFpAMOxrdshqJayhgpkeSK9CAOoEKKk3JFhXeeD7Le0cgc16cKqN7OMx1IKBuBrS37A05PHIUsJ/1CGDGX5rDVU+yk+o1hDmYEhSolq0VzZHUkQvmuKmEW/RELk6PammnVFe5cCMVNTOAFnQNnwQpERVU4F2BtaLmxCCilQJA4YZPKryzU1Fri6+RZKxbqXSPOiSnqpQj4bBCK8flLPauNtCBZY08ET/UH8ENPInEXlVmCtgvqK6mXWA1Ol/+iVKg+hKxICRlEWpp7pMzb6ye/z/rpiAIbrzlfP7tBDnO+L7lizsn2s7NnGvway3HpEBCBsG2wE9lWFSom6V5Ry4bsi77mY2az2qCrMi2YTnGzKkEuzNm5KXTvmNgf05S8M715rkRlUZzFTmfu1HgtxGG5hH9tMDB7dT0bUAjDL8rfl4J+e/XGaYTzBDT26e7IIqjbZJl4RY/HB11uusbbqTD7IqCOPE9p4Hv8D8ulwaHAtqcx+FjlsudebR6+88RRsrOjxFg46/jXRj7ySbFTpRu0q2/CZMY+5tdhJ1dmPjphgzjbZLEX5COV3MMP063mzUcn762Wz/BcM4iBPCjMFtnm2gbZ/ApwEulaR7jblhkeqBh2xEtw4xp/WXBd2h1uYDExklMI0bovNyElLwW7dNpJZSZFwmqwHqeB4fzxDrQ3eDtt1kCrtIwnK8lcIuTR0ZmKA4/fEtBUkS49KW9rxfIk2dztMH3Xopf99A65hpN+qs/1ug9tREL34PT7gEpLGQqFK4YtyRYbsLVSrYcA+z5GqSPZXPVYzTycuUODvHzVd4NZt1GU1jdDt39rTv1uza47SpSWqN7KBfaP9Bd7L1kCrNRlq4mYDFhFnRnYBVuwwf/ewBVmPz32/YW90C5zcbYRrl8BdBLpm8PyNyJu/vjadhFLrb3k5hO6fQKoJdM3x6Q5HlbjW1RpRFEexxc1g6vAHrJ9O0B6ViqvBjukvA2KftJbuT96RVAL5k+A4qT3QWe3YYkPr+bFnWf34EfDaavMN75bAkc8/f69/HXT++uQ4/cChqp3v57yuF/bXZK8aTKm9bYpnWRU6+U85LpJb8X5cTJ+sH3hDU5obKT0h3uS8TwLkY4LEaRW/nfgRFdPnPPr1yzPB3pSrPnhyOV5lEXLzzX376Q6bEhAusEbzs8LHARzYzwrlvF6xiXwcyguMezVeHZTHDJllg+Hz98+ReVPkNOoQsAAA==
+    http_version: 
+  recorded_at: Fri, 12 Jan 2018 18:02:30 GMT
+recorded_with: VCR 4.0.0

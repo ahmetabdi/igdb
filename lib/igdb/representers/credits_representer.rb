@@ -1,7 +1,13 @@
-# URL path: /credits/
-# Contains all employees responsible for working on the game.
-module Igdb::CreditsRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::CreditsRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
   property :game
   property :category

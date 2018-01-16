@@ -1,7 +1,6 @@
-# URL path: /pulses/
-# A single news article.
-module Igdb::PulseRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::PulseRepresenter < Igdb::Representer
   
   property :id
   property :pulse_source

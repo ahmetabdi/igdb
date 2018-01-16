@@ -1,8 +1,7 @@
 # URL path: /pulse_sources/
-# A handy endpoint that extends the games endpoint. Used to dig deeper into 
-# release dates, platforms and versions.
-module Igdb::ReleaseDateRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::ReleaseDateRepresenter < Igdb::Representer
   
   property :id
   property :game

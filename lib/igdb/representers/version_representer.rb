@@ -1,7 +1,13 @@
-# URL path: /versions/
-# Details about game editions and versions.
-module Igdb::VersionRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::VersionRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
   property :description
   

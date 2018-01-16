@@ -1,6 +1,7 @@
 # URL path: /reviews/
-module Igdb::ReviewRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::ReviewRepresenter < Igdb::Representer
 
   property :id # The id of the character.
   property :username # The name of the character.

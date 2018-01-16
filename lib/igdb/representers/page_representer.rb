@@ -1,7 +1,13 @@
-# URL path: /pages/
-# Our multipurpose page system is currently used for youtubers and media organisations.
-module Igdb::PageRepresenter
-  include Igdb::Representer
+require 'representable/json'
+
+class Igdb::PageRepresenter < Igdb::Representer
+
+  property :id
+  property :name
+  property :slug
+  property :url
+  property :created_at
+  property :updated_at
   
   property :content
   property :category
@@ -29,6 +35,6 @@ module Igdb::PageRepresenter
   property :uplay
   property :discord
   
-  collection :game, extend: Igdb::GameRepresenter, class: Igdb::Game
-  collection :company, extend: Igdb::CompanyRepresenter, class: Igdb::Company
+  collection :game
+  collection :company
 end

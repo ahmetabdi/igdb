@@ -1,5 +1,6 @@
-module Igdb::AlternativeNameRepresenter
-  include Representable::JSON
+require 'representable/json'
+
+class Igdb::AlternativeNameRepresenter < Igdb::Representer
   
   property :name
   property :comment

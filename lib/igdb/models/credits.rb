@@ -1,4 +1,6 @@
-class Igdb::Credits < Igdb::ApiResource
+module Igdb
+  class Credits < Igdb::ApiResource
     @path = 'credits'
     @representer = Igdb::CreditsRepresenter
+  end
 end

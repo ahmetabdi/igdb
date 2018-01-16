@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Credits do
   subject { described_class }
 
@@ -24,22 +24,22 @@ describe Igdb::Credits do
           expect(credits).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:credits) { VCR.use_cassette('credits/count') { subject.count } }
-        
+
         it 'return the number of credits in the database' do
           expect(credits).to be_a Integer
         end
       end
 
       context 'self.find' do
-        let(:credits) { VCR.use_cassette('credits/find') { subject.find(1342178444) } }
+        let(:credits) { VCR.use_cassette('credits/find') { subject.find(1_342_178_444) } }
 
         it 'returns a credits' do
           expect(credits).to be_a Igdb::Credits
         end
-        
+
         it 'returns the correct credits' do
           expect(credits.name).to eq('Production Babies')
         end

@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Genre do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Genre do
           expect(genre).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:genre) { VCR.use_cassette('genres/count') { subject.count } }
-        
+
         it 'return the number of genres in the database' do
           expect(genre).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Genre do
         it 'returns a genre' do
           expect(genre).to be_a Igdb::Genre
         end
-        
+
         it 'returns the correct genre' do
           expect(genre.name).to eq('Fighting')
         end

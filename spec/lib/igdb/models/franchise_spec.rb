@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Franchise do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Franchise do
           expect(franchise).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:franchise) { VCR.use_cassette('franchises/count') { subject.count } }
-        
+
         it 'return the number of franchises in the database' do
           expect(franchise).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Franchise do
         it 'returns a franchise' do
           expect(franchise).to be_a Igdb::Franchise
         end
-        
+
         it 'returns the correct franchise' do
           expect(franchise.name).to eq('Star Wars')
         end

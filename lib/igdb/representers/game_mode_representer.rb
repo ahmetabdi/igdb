@@ -1,7 +1,11 @@
 require 'representable/json'
 
-class Igdb::GameModeRepresenter < Igdb::Representer
-  collection_representer class: Igdb::GameMode
-  
-  collection :games
+# URL path: /game_modes/
+# Single player, Multiplayer etc.
+module Igdb
+  class GameModeRepresenter < Igdb::Representer
+    collection_representer class: Igdb::GameMode
+
+    collection :games
+  end
 end

@@ -18,10 +18,22 @@ $ gem install igdb
 ```ruby
 $ Igdb.connect('api_key')
 ```
-##### Game
+If no parameter is given, Igdb will default to ENV['IGDB_KEY'].
+```ruby
+$ Igdb.connect # => Igdb.connect(ENV['IGDB_KEY'])
+```
+##### Usage
   Find game by ID
 ```ruby
 $ Igdb::Game.find(1971)
+```
+  Find game by ID with options
+```ruby
+$ Igdb::Game.find(1971, { fields: 'slug,name' })
+```
+  Find a game by slug
+```ruby
+$ Igdb::Game.slug('batman')
 ```
   Search for a game
 ```ruby
@@ -29,7 +41,7 @@ $ Igdb::Game.search(query: 'batman')
 ```
   Return the number of games in the database
 ```ruby
-$ Igdb::Game.meta
+$ Igdb::Game.count
 ```
   Return a list of all games with an offset and/or limit
 ```ruby
@@ -37,35 +49,35 @@ $ Igdb::Game.all
 $ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
 $ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
 ```
-##### Person
-  Find person by ID or name
+  Return the available properties of games
 ```ruby
-$ Igdb::Person.find(4)
-$ Igdb::Person.find('derek-watts')
+$ Igdb::Game.meta
 ```
-  Return the number of people in the database
+### Endpoints
 ```ruby
-$ Igdb::Person.meta
-```
-  Return a list of all games with an offset and/or limit
-```ruby
-$ Igdb::Person.all
-$ Igdb::Person.all(limit: 10) # Limit to 10 results - Default 100
-$ Igdb::Person.all(offset: 5) # Offset result starting at 5th - Default 0
-```
-##### Company
-  Find company by ID or name
-```ruby
-$ Igdb::Company.find(70)
-$ Igdb::Company.find('nintendo')
-```
-  Return the number of companies in the database.
-```ruby
-$ Igdb::Company.meta
-```
-  Return the games for a company
-```ruby
-$ Igdb::Company.find('2000').games
+Igdb::Character
+Igdb::Collection
+Igdb::Company
+Igdb::Credits
+Igdb::Feed
+Igdb::Franchise
+Igdb::GameEngine
+Igdb::GameMode
+Igdb::Game
+Igdb::Genre
+Igdb::Keyword
+Igdb::Page
+Igdb::Person
+Igdb::Platform
+Igdb::PlayerPerspective
+Igdb::PulseGroup
+Igdb::Pulse
+Igdb::PulseSource
+Igdb::ReleaseDate
+Igdb::Review
+Igdb::Theme
+Igdb::Title
+Igdb::Version
 ```
 ## Contributing
 

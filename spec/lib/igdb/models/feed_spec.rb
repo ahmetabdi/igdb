@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Feed do
   subject { described_class }
 
@@ -24,24 +24,24 @@ describe Igdb::Feed do
           expect(feed).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:feed) { VCR.use_cassette('feeds/count') { subject.count } }
-        
+
         it 'return the number of feeds in the database' do
           expect(feed).to be_a Integer
         end
       end
 
       context 'self.find' do
-        let(:feed) { VCR.use_cassette('feeds/find') { subject.find(14428) } }
+        let(:feed) { VCR.use_cassette('feeds/find') { subject.find(14_428) } }
 
         it 'returns a feed' do
           expect(feed).to be_a Igdb::Feed
         end
-        
+
         it 'returns the correct feed' do
-          expect(feed.url).to eq("https://www.igdb.com/feed/b4s")
+          expect(feed.url).to eq('https://www.igdb.com/feed/b4s')
         end
       end
     end

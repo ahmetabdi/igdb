@@ -1,4 +1,5 @@
-class Igdb::AlternativeName < Igdb::ApiResource
-    @path = 'alternative_names'
+module Igdb
+  class AlternativeName < Igdb::ApiResource
     @representer = Igdb::AlternativeNameRepresenter
+  end
 end

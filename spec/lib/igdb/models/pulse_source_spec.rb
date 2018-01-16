@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::PulseSource do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::PulseSource do
           expect(pulse_source).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:pulse_source) { VCR.use_cassette('pulse_sources/count') { subject.count } }
-        
+
         it 'return the number of pulse sources in the database' do
           expect(pulse_source).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::PulseSource do
         it 'returns a pulse_source' do
           expect(pulse_source).to be_a Igdb::PulseSource
         end
-        
+
         it 'returns the correct pulse_source' do
           expect(pulse_source.name).to eq('Kotaku')
         end

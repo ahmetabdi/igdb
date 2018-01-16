@@ -1,4 +1,6 @@
-class Igdb::Video < Igdb::ApiResource
+module Igdb
+  class Video < Igdb::ApiResource
     @path = 'videos'
     @representer = Igdb::VideoRepresenter
+  end
 end

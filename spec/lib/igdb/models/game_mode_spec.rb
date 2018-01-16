@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::GameMode do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::GameMode do
           expect(game_mode).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:game_mode) { VCR.use_cassette('game_modes/count') { subject.count } }
-        
+
         it 'return the number of companies in the database' do
           expect(game_mode).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::GameMode do
         it 'returns a game_mode' do
           expect(game_mode).to be_a Igdb::GameMode
         end
-        
+
         it 'returns the correct game_mode' do
           expect(game_mode.name).to eq('Single player')
         end

@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Theme do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Theme do
           expect(theme).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:theme) { VCR.use_cassette('themes/count') { subject.count } }
-        
+
         it 'return the number of themes in the database' do
           expect(theme).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Theme do
         it 'returns a theme' do
           expect(theme).to be_a Igdb::Theme
         end
-        
+
         it 'returns the correct theme' do
           expect(theme.name).to eq('Action')
         end

@@ -1,4 +1,6 @@
-class Igdb::Theme < Igdb::ApiResource
+module Igdb
+  class Theme < Igdb::ApiResource
     @path = 'themes'
     @representer = Igdb::ThemeRepresenter
+  end
 end

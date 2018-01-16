@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::PulseGroup do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::PulseGroup do
           expect(pulse_group).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:pulse_group) { VCR.use_cassette('pulse_groups/count') { subject.count } }
-        
+
         it 'return the number of pulse groups in the database' do
           expect(pulse_group).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::PulseGroup do
         it 'returns a pulse_group' do
           expect(pulse_group).to be_a Igdb::PulseGroup
         end
-        
+
         it 'returns the correct pulse_group' do
           expect(pulse_group.name).to eq("Hellblade: Senua's Sacrifice")
         end

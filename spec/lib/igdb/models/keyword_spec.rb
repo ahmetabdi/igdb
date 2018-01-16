@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Keyword do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Keyword do
           expect(keyword).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:keyword) { VCR.use_cassette('keywords/count') { subject.count } }
-        
+
         it 'return the number of keywords in the database' do
           expect(keyword).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Keyword do
         it 'returns a keyword' do
           expect(keyword).to be_a Igdb::Keyword
         end
-        
+
         it 'returns the correct keyword' do
           expect(keyword.name).to eq('aliens')
         end

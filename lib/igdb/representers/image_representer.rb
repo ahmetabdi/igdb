@@ -1,10 +1,14 @@
 require 'representable/json'
 
-class Igdb::ImageRepresenter < Igdb::Representer
-  collection_representer class: Igdb::Image
+module Igdb
+  class ImageRepresenter < Representable::Decorator
+    include Representable::JSON
 
-  property :url
-  property :cloudinary_id
-  property :width
-  property :height
+    collection_representer class: Igdb::Image
+
+    property :url # Can be non-IGDB URL
+    property :cloudinary_id # Cloudinary slug
+    property :width # The image's width in pixels
+    property :height # The image's height in pixels
+  end
 end

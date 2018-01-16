@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::GameEngine do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::GameEngine do
           expect(game_engine).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:game_engine) { VCR.use_cassette('game_engines/count') { subject.count } }
-        
+
         it 'return the number of game engines in the database' do
           expect(game_engine).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::GameEngine do
         it 'returns a game_engine' do
           expect(game_engine).to be_a Igdb::GameEngine
         end
-        
+
         it 'returns the correct game_engine' do
           expect(game_engine.name).to eq('Frostbite')
         end

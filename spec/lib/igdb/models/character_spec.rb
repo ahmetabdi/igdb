@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Character do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Character do
           expect(character).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:character) { VCR.use_cassette('characters/count') { subject.count } }
-        
+
         it 'return the number of characters in the database' do
           expect(character).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Character do
         it 'returns a character' do
           expect(character).to be_a Igdb::Character
         end
-        
+
         it 'returns the correct character' do
           expect(character.name).to eq('Urdnot Wrex')
         end

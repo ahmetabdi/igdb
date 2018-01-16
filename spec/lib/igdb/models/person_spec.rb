@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Person do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Person do
           expect(person).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:person) { VCR.use_cassette('people/count') { subject.count } }
-        
+
         it 'return the number of people in the database' do
           expect(person).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Person do
         it 'returns a person' do
           expect(person).to be_a Igdb::Person
         end
-        
+
         it 'returns the correct person' do
           expect(person.name).to eq('Casey Hudson')
         end

@@ -1,8 +1,11 @@
-# URL path: /player_perspectives/
 require 'representable/json'
 
-class Igdb::PlayerPerspectiveRepresenter < Igdb::Representer
-  collection_representer class: Igdb::PlayerPerspective
-  
-  collection :games
+# URL path: /player_perspectives/
+# First person, third person, etc.
+module Igdb
+  class PlayerPerspectiveRepresenter < Igdb::Representer
+    collection_representer class: Igdb::PlayerPerspective
+
+    collection :games
+  end
 end

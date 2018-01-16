@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Collection do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Collection do
           expect(collection).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:collection) { VCR.use_cassette('collections/count') { subject.count } }
-        
+
         it 'return the number of collections in the database' do
           expect(collection).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Collection do
         it 'returns a collection' do
           expect(collection).to be_a Igdb::Collection
         end
-        
+
         it 'returns the correct collection' do
           expect(collection.name).to eq('Bioshock')
         end

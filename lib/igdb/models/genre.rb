@@ -1,4 +1,6 @@
-class Igdb::Genre < Igdb::ApiResource
+module Igdb
+  class Genre < Igdb::ApiResource
     @path = 'genres'
     @representer = Igdb::GenreRepresenter
+  end
 end

@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Company do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Company do
           expect(company).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:company) { VCR.use_cassette('companies/count') { subject.count } }
-        
+
         it 'return the number of companies in the database' do
           expect(company).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Company do
         it 'returns a company' do
           expect(company).to be_a Igdb::Company
         end
-        
+
         it 'returns the correct company' do
           expect(company.name).to eq('Cat Daddy Games')
         end

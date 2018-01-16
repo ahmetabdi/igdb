@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Title do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Title do
           expect(title).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:title) { VCR.use_cassette('titles/count') { subject.count } }
-        
+
         it 'return the number of titles in the database' do
           expect(title).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Title do
         it 'returns a title' do
           expect(title).to be_a Igdb::Title
         end
-        
+
         it 'returns the correct title' do
           expect(title.name).to eq('Project Director')
         end

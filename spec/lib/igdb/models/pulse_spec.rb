@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Pulse do
   subject { described_class }
 
@@ -24,22 +24,22 @@ describe Igdb::Pulse do
           expect(pulse).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:pulse) { VCR.use_cassette('pulses/count') { subject.count } }
-        
+
         it 'return the number of pulses in the database' do
           expect(pulse).to be_a Integer
         end
       end
 
       context 'self.find' do
-        let(:pulse) { VCR.use_cassette('pulses/find') { subject.find(142583) } }
+        let(:pulse) { VCR.use_cassette('pulses/find') { subject.find(142_583) } }
 
         it 'returns a pulse' do
           expect(pulse).to be_a Igdb::Pulse
         end
-        
+
         it 'returns the correct pulse' do
           expect(pulse.title).to eq('Bloodstained: Ritual of the Night Receives E3 Trailer, New Boss Showcased')
         end

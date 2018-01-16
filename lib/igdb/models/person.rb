@@ -1,4 +1,6 @@
-class Igdb::Person < Igdb::ApiResource
+module Igdb
+  class Person < Igdb::ApiResource
     @path = 'people'
     @representer = Igdb::PersonRepresenter
+  end
 end

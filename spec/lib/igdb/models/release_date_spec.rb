@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::ReleaseDate do
   subject { described_class }
 
@@ -24,22 +24,22 @@ describe Igdb::ReleaseDate do
           expect(release_date).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:release_date) { VCR.use_cassette('release_dates/count') { subject.count } }
-        
+
         it 'return the number of release dates in the database' do
           expect(release_date).to be_a Integer
         end
       end
 
       context 'self.find' do
-        let(:release_date) { VCR.use_cassette('release_dates/find') { subject.find(19271) } }
+        let(:release_date) { VCR.use_cassette('release_dates/find') { subject.find(19_271) } }
 
         it 'returns a release_date' do
           expect(release_date).to be_a Igdb::ReleaseDate
         end
-        
+
         it 'returns the correct release_date' do
           expect(release_date.platform).to be_a Integer
         end

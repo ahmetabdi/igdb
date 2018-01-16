@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Platform do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Platform do
           expect(platform).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:platform) { VCR.use_cassette('platforms/count') { subject.count } }
-        
+
         it 'return the number of platforms in the database' do
           expect(platform).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Platform do
         it 'returns a platform' do
           expect(platform).to be_a Igdb::Platform
         end
-        
+
         it 'returns the correct platform' do
           expect(platform.name).to eq('Linux')
         end

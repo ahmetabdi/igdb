@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::Review do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::Review do
           expect(review).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:review) { VCR.use_cassette('reviews/count') { subject.count } }
-        
+
         it 'return the number of reviews in the database' do
           expect(review).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::Review do
         it 'returns a review' do
           expect(review).to be_a Igdb::Review
         end
-        
+
         it 'returns the correct review' do
           expect(review.game).to be_a Integer
         end

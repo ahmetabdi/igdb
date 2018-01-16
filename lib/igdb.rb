@@ -1,16 +1,21 @@
 module Igdb
-  #Utilities
+  # Utilities
   autoload :Configuration, 'igdb/configuration/api'
   autoload :Requester, 'igdb/requester'
   autoload :Exception, 'igdb/exceptions'
+  autoload :VERSION, 'igdb/version'
 
-  #Models
-  autoload :ApiResource, 'igdb/models/api_resource'
+  # Models
   autoload :AlternativeName, 'igdb/models/alternative_name'
+  autoload :ApiResource, 'igdb/models/api_resource'
   autoload :Character, 'igdb/models/character'
   autoload :Collection, 'igdb/models/collection'
   autoload :Company, 'igdb/models/company'
   autoload :Credits, 'igdb/models/credits'
+  autoload :Esrb, 'igdb/models/esrb'
+  autoload :External, 'igdb/models/external'
+  autoload :Feature, 'igdb/models/feature'
+  autoload :FeatureValue, 'igdb/models/feature_value'
   autoload :Feed, 'igdb/models/feed'
   autoload :Franchise, 'igdb/models/franchise'
   autoload :Game, 'igdb/models/game'
@@ -20,8 +25,12 @@ module Igdb
   autoload :Image, 'igdb/models/image'
   autoload :Keyword, 'igdb/models/keyword'
   autoload :Page, 'igdb/models/page'
+  autoload :Pegi, 'igdb/models/pegi'
   autoload :Person, 'igdb/models/person'
   autoload :Platform, 'igdb/models/platform'
+  autoload :PlatformCompany, 'igdb/models/platform_company'
+  autoload :PlatformVersion, 'igdb/models/platform_version'
+  autoload :PlatformVersionReleaseDate, 'igdb/models/platform_version_release_date'
   autoload :PlayerPerspective, 'igdb/models/player_perspective'
   autoload :Pulse, 'igdb/models/pulse'
   autoload :PulseGroup, 'igdb/models/pulse_group'
@@ -29,17 +38,22 @@ module Igdb
   autoload :ReleaseDate, 'igdb/models/release_date'
   autoload :Review, 'igdb/models/review'
   autoload :Theme, 'igdb/models/theme'
+  autoload :TimeToBeat, 'igdb/models/time_to_beat'
   autoload :Title, 'igdb/models/title'
   autoload :Version, 'igdb/models/version'
   autoload :Video, 'igdb/models/video'
+  autoload :Website, 'igdb/models/website'
 
-  #Presenters
-  autoload :Representer, 'igdb/representers/representer'
+  # Presenters
   autoload :AlternativeNameRepresenter, 'igdb/representers/alternative_name_representer'
   autoload :CharacterRepresenter, 'igdb/representers/character_representer'
   autoload :CollectionRepresenter, 'igdb/representers/collection_representer'
   autoload :CompanyRepresenter, 'igdb/representers/company_representer'
   autoload :CreditsRepresenter, 'igdb/representers/credits_representer'
+  autoload :EsrbRepresenter, 'igdb/representers/esrb_representer'
+  autoload :ExternalRepresenter, 'igdb/representers/external_representer'
+  autoload :FeatureRepresenter, 'igdb/representers/feature_representer'
+  autoload :FeatureValueRepresenter, 'igdb/representers/feature_value_representer'
   autoload :FeedRepresenter, 'igdb/representers/feed_representer'
   autoload :FranchiseRepresenter, 'igdb/representers/franchise_representer'
   autoload :GameEngineRepresenter, 'igdb/representers/game_engine_representer'
@@ -49,20 +63,27 @@ module Igdb
   autoload :ImageRepresenter, 'igdb/representers/image_representer'
   autoload :KeywordRepresenter, 'igdb/representers/keyword_representer'
   autoload :PageRepresenter, 'igdb/representers/page_representer'
+  autoload :PegiRepresenter, 'igdb/representers/pegi_representer'
   autoload :PersonRepresenter, 'igdb/representers/person_representer'
+  autoload :PlatformCompanyRepresenter, 'igdb/representers/platform_company_representer'
   autoload :PlatformRepresenter, 'igdb/representers/platform_representer'
+  autoload :PlatformVersionReleaseDateRepresenter, 'igdb/representers/platform_version_release_date_representer'
+  autoload :PlatformVersionRepresenter, 'igdb/representers/platform_version_representer'
   autoload :PlayerPerspectiveRepresenter, 'igdb/representers/player_perspective_representer'
   autoload :PulseGroupRepresenter, 'igdb/representers/pulse_group_representer'
   autoload :PulseRepresenter, 'igdb/representers/pulse_representer'
   autoload :PulseSourceRepresenter, 'igdb/representers/pulse_source_representer'
   autoload :ReleaseDateRepresenter, 'igdb/representers/release_date_representer'
+  autoload :Representer, 'igdb/representers/representer'
   autoload :ReviewRepresenter, 'igdb/representers/review_representer'
   autoload :ThemeRepresenter, 'igdb/representers/theme_representer'
+  autoload :TimeToBeatRepresenter, 'igdb/representers/time_to_beat_representer'
   autoload :TitleRepresenter, 'igdb/representers/title_representer'
   autoload :VersionRepresenter, 'igdb/representers/version_representer'
   autoload :VideoRepresenter, 'igdb/representers/video_representer'
+  autoload :WebsiteRepresenter, 'igdb/representers/website_representer'
 
-  def self.connect(api_key=ENV['IGDB_KEY'])
+  def self.connect(api_key = ENV['IGDB_KEY'])
     Igdb::Configuration::Api.instance.tap do |api|
       api.connect(api_key)
     end

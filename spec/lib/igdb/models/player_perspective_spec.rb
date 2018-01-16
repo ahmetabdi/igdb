@@ -1,5 +1,5 @@
 require 'spec_helper'
-        
+
 describe Igdb::PlayerPerspective do
   subject { described_class }
 
@@ -24,10 +24,10 @@ describe Igdb::PlayerPerspective do
           expect(player_perspective).to be_a Array
         end
       end
-      
+
       context 'self.count' do
         let(:player_perspective) { VCR.use_cassette('player_perspectives/count') { subject.count } }
-        
+
         it 'return the number of player perspectives in the database' do
           expect(player_perspective).to be_a Integer
         end
@@ -39,7 +39,7 @@ describe Igdb::PlayerPerspective do
         it 'returns a player_perspective' do
           expect(player_perspective).to be_a Igdb::PlayerPerspective
         end
-        
+
         it 'returns the correct player_perspective' do
           expect(player_perspective.name).to eq('First person')
         end

@@ -1,4 +1,6 @@
-class Igdb::PulseSource < Igdb::ApiResource
+module Igdb
+  class PulseSource < Igdb::ApiResource
     @path = 'pulse_sources'
     @representer = Igdb::PulseSourceRepresenter
+  end
 end

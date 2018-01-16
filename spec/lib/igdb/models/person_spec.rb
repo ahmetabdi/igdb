@@ -29,7 +29,7 @@ describe Igdb::Person do
         let(:person) { VCR.use_cassette('people/count') { subject.count } }
         
         it 'return the number of people in the database' do
-          expect(person).to eq(142035)
+          expect(person).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Person do
         let(:person) { VCR.use_cassette('people/find') { subject.find(1) } }
 
         it 'returns a person' do
-          expect(person).to be_a Igdb::PersonRepresenter
+          expect(person).to be_a Igdb::Person
         end
         
         it 'returns the correct person' do

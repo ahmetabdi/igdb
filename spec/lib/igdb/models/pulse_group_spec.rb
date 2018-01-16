@@ -29,7 +29,7 @@ describe Igdb::PulseGroup do
         let(:pulse_group) { VCR.use_cassette('pulse_groups/count') { subject.count } }
         
         it 'return the number of pulse groups in the database' do
-          expect(pulse_group).to eq(22688)
+          expect(pulse_group).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::PulseGroup do
         let(:pulse_group) { VCR.use_cassette('pulse_groups/find') { subject.find(31) } }
 
         it 'returns a pulse_group' do
-          expect(pulse_group).to be_a Igdb::PulseGroupRepresenter
+          expect(pulse_group).to be_a Igdb::PulseGroup
         end
         
         it 'returns the correct pulse_group' do

@@ -2,6 +2,7 @@
 require 'representable/json'
 
 class Igdb::PulseSourceRepresenter < Igdb::Representer
+  collection_representer class: Igdb::PulseSource
   
   property :id
   property :name

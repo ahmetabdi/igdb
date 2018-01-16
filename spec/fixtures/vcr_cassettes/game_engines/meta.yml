@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 12 Jan 2018 19:04:24 GMT
+      - Tue, 16 Jan 2018 18:07:02 GMT
       Server:
       - openresty/1.9.15.1
       X-Powered-By:
@@ -41,5 +41,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAC/0WNXQqAMAyD77Jn8UIiUta5Fbp17Afx9nbi8Cn5Akk2kyA6sxhbHDSHBzSFnvEHFi+frL3wtJalIyUo90E4w4uwhQnBkQ9joXL3Y/Ute/2rqpmhnVLi8FZihkSa7w8WivNpkQAAAA==
     http_version: 
-  recorded_at: Fri, 12 Jan 2018 19:04:25 GMT
+  recorded_at: Tue, 16 Jan 2018 18:07:03 GMT
 recorded_with: VCR 4.0.0

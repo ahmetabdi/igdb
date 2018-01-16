@@ -4,13 +4,7 @@ require 'representable/json'
 # URL path: /characters/
 # Video game characters
 class Igdb::CharacterRepresenter < Igdb::Representer
-
-  property :id
-  property :name
-  property :slug
-  property :url
-  property :created_at
-  property :updated_at
+  collection_representer class: Igdb::Character
   
   property :mug_shot # See the Image object reference.
   property :gender # See the Gender value reference.

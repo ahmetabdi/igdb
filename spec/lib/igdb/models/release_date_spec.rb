@@ -29,7 +29,7 @@ describe Igdb::ReleaseDate do
         let(:release_date) { VCR.use_cassette('release_dates/count') { subject.count } }
         
         it 'return the number of release dates in the database' do
-          expect(release_date).to eq(112610)
+          expect(release_date).to be_a Integer
         end
       end
 
@@ -37,11 +37,11 @@ describe Igdb::ReleaseDate do
         let(:release_date) { VCR.use_cassette('release_dates/find') { subject.find(19271) } }
 
         it 'returns a release_date' do
-          expect(release_date).to be_a Igdb::ReleaseDateRepresenter
+          expect(release_date).to be_a Igdb::ReleaseDate
         end
         
         it 'returns the correct release_date' do
-          expect(release_date.platform).to eq(65)
+          expect(release_date.platform).to be_a Integer
         end
       end
     end

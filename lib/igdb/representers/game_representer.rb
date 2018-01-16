@@ -2,6 +2,7 @@ require 'ostruct'
 require 'representable/hash'
 
 class Igdb::GameRepresenter < Igdb::Representer
+  collection_representer class: Igdb::Game
   include Representable::JSON
   
   property :summary # Summary of the game.

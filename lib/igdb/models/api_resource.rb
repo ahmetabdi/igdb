@@ -3,27 +3,32 @@ require 'ostruct'
 
 class Igdb::ApiResource < OpenStruct
   class << self
-    attr_accessor :path
-    attr_accessor :representer
+    attr_accessor :path, :representer
     
     def count
-      Igdb::Requester.get("#{self.path}/count")['count']
+      Igdb::Requester.get("#{path}/count")['count']
     end
     
     def meta
-      Igdb::Requester.get("#{self.path}/meta")
+      Igdb::Requester.get("#{path}/meta")
     end
   
     def find(id, options = {})
       params = options
       params[:fields] = '*' unless params[:fields]
-      build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
+      
+      if id.class == Array
+        build_collection(Igdb::Requester.get("#{path}/#{id.join(',')}", params), representer)
+      else
+        build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
+      end
     end
     
     def slug(id, options = {})
       params = options
-      params[:fields] = '*' unless params[:fields]
-      params[:'filter[slug][eq]'] = id
+      params['fields'] = '*' unless params[:fields]
+      params['filter[slug][eq]'] = id
+      
       build_single_resource(Igdb::Requester.get("#{path}/", params)[0], representer)
     end
 
@@ -44,24 +49,17 @@ class Igdb::ApiResource < OpenStruct
         hash['fields'] = '*'
       end
       
-      build_collection(Igdb::Requester.get("#{path}/", params), self.representer)
+      build_collection(Igdb::Requester.get("#{path}/", opts), representer)
     end
-  end
 
-  private
+    private
+    
+    def build_single_resource(response, representer)
+      representer.new(self.new).from_hash(response)
+    end
   
-  def self.build_single_resource(response, representer)
-    representer.new(response)
-  end
-
-  def self.build_collection(response, representer)
-    response.reduce([]) do |resources, response|
-      resources << representer.new(response)
+    def build_collection(response, representer)
+      representer.for_collection.new([]).from_hash(response)
     end
-  end
-
-  def build_for_collection(response, representer)
-    # [].extend(representer.for_collection).from_hash(response)
-    representer.for_collection.new(response)
   end
 end

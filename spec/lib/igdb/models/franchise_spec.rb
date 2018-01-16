@@ -29,7 +29,7 @@ describe Igdb::Franchise do
         let(:franchise) { VCR.use_cassette('franchises/count') { subject.count } }
         
         it 'return the number of franchises in the database' do
-          expect(franchise).to eq(1138)
+          expect(franchise).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Franchise do
         let(:franchise) { VCR.use_cassette('franchises/find') { subject.find(1) } }
 
         it 'returns a franchise' do
-          expect(franchise).to be_a Igdb::FranchiseRepresenter
+          expect(franchise).to be_a Igdb::Franchise
         end
         
         it 'returns the correct franchise' do

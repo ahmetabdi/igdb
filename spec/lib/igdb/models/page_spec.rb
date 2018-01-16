@@ -29,7 +29,7 @@ describe Igdb::Page do
         let(:page) { VCR.use_cassette('pages/count') { subject.count } }
         
         it 'return the number of pages in the database' do
-          expect(page).to eq(592)
+          expect(page).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Page do
         let(:page) { VCR.use_cassette('pages/find') { subject.find(1) } }
 
         it 'returns a page' do
-          expect(page).to be_a Igdb::PageRepresenter
+          expect(page).to be_a Igdb::Page
         end
         
         it 'returns the correct page' do

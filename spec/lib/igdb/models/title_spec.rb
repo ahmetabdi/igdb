@@ -29,7 +29,7 @@ describe Igdb::Title do
         let(:title) { VCR.use_cassette('titles/count') { subject.count } }
         
         it 'return the number of titles in the database' do
-          expect(title).to eq(31632)
+          expect(title).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Title do
         let(:title) { VCR.use_cassette('titles/find') { subject.find(1) } }
 
         it 'returns a title' do
-          expect(title).to be_a Igdb::TitleRepresenter
+          expect(title).to be_a Igdb::Title
         end
         
         it 'returns the correct title' do

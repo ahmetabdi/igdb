@@ -2,6 +2,7 @@
 require 'representable/json'
 
 class Igdb::ReviewRepresenter < Igdb::Representer
+  collection_representer class: Igdb::Review
 
   property :id # The id of the character.
   property :username # The name of the character.

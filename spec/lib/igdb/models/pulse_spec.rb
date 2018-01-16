@@ -29,7 +29,7 @@ describe Igdb::Pulse do
         let(:pulse) { VCR.use_cassette('pulses/count') { subject.count } }
         
         it 'return the number of pulses in the database' do
-          expect(pulse).to eq(117847)
+          expect(pulse).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Pulse do
         let(:pulse) { VCR.use_cassette('pulses/find') { subject.find(142583) } }
 
         it 'returns a pulse' do
-          expect(pulse).to be_a Igdb::PulseRepresenter
+          expect(pulse).to be_a Igdb::Pulse
         end
         
         it 'returns the correct pulse' do

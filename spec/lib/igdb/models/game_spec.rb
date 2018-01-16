@@ -30,7 +30,7 @@ describe Igdb::Game do
         let(:game) { VCR.use_cassette("game/count") { subject.count } }
         
         it "return the number of games in the database" do
-          expect(game).to eq(79072)
+          expect(game).to be_a Integer
         end
       end
 
@@ -38,14 +38,11 @@ describe Igdb::Game do
         let(:game) { VCR.use_cassette("game/find") { subject.find(2000) } }
 
         it "returns a game" do
-        
-        puts '*' * 60
-        
-          expect(game).to be_a Igdb::GameRepresenter
+          expect(game).to be_a Igdb::Game
         end
 
         it "returns the correct game" do
-          expect(game.represented.name).to eq('Postal')
+          expect(game.name).to eq('Postal')
         end
       end
 
@@ -55,7 +52,7 @@ describe Igdb::Game do
         it "returns a group of game results" do
           expect(game).to be_a Array
           expect(game).not_to be_empty
-          expect(game.first).to be_a Igdb::GameRepresenter
+          expect(game.first).to be_a Igdb::Game
         end
       end
 
@@ -67,17 +64,17 @@ describe Igdb::Game do
         it "returns a list of games" do
           expect(game).to be_a Array
           expect(game).not_to be_empty
-          expect(game.first).to be_a Igdb::GameRepresenter
+          expect(game.first).to be_a Igdb::Game
         end
 
         it "returns a limit" do
           expect(game_with_limit).to be_a Array
-          expect(game_with_limit.length).to eq(5)
+          expect(game_with_limit.length).to be_a Integer
         end
 
         it "returns a offset" do
           expect(game_with_limit_and_offset).to be_a Array
-          expect(game_with_limit_and_offset.length).to eq(5)
+          expect(game_with_limit_and_offset.length).to be_a Integer
         end
 
       end

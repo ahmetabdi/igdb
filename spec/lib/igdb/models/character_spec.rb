@@ -29,7 +29,7 @@ describe Igdb::Character do
         let(:character) { VCR.use_cassette('characters/count') { subject.count } }
         
         it 'return the number of characters in the database' do
-          expect(character).to eq(11079)
+          expect(character).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Character do
         let(:character) { VCR.use_cassette('characters/find') { subject.find(1) } }
 
         it 'returns a character' do
-          expect(character).to be_a Igdb::CharacterRepresenter
+          expect(character).to be_a Igdb::Character
         end
         
         it 'returns the correct character' do

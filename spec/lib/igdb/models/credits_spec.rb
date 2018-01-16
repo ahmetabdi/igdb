@@ -29,7 +29,7 @@ describe Igdb::Credits do
         let(:credits) { VCR.use_cassette('credits/count') { subject.count } }
         
         it 'return the number of credits in the database' do
-          expect(credits).to eq(297446)
+          expect(credits).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Credits do
         let(:credits) { VCR.use_cassette('credits/find') { subject.find(1342178444) } }
 
         it 'returns a credits' do
-          expect(credits).to be_a Igdb::CreditsRepresenter
+          expect(credits).to be_a Igdb::Credits
         end
         
         it 'returns the correct credits' do

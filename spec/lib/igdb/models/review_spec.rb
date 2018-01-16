@@ -29,7 +29,7 @@ describe Igdb::Review do
         let(:review) { VCR.use_cassette('reviews/count') { subject.count } }
         
         it 'return the number of reviews in the database' do
-          expect(review).to eq(817)
+          expect(review).to be_a Integer
         end
       end
 
@@ -37,11 +37,11 @@ describe Igdb::Review do
         let(:review) { VCR.use_cassette('reviews/find') { subject.find(2234) } }
 
         it 'returns a review' do
-          expect(review).to be_a Igdb::ReviewRepresenter
+          expect(review).to be_a Igdb::Review
         end
         
         it 'returns the correct review' do
-          expect(review.game).to eq(885)
+          expect(review.game).to be_a Integer
         end
       end
     end

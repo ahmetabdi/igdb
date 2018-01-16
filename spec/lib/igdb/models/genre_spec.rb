@@ -29,7 +29,7 @@ describe Igdb::Genre do
         let(:genre) { VCR.use_cassette('genres/count') { subject.count } }
         
         it 'return the number of genres in the database' do
-          expect(genre).to eq(20)
+          expect(genre).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Genre do
         let(:genre) { VCR.use_cassette('genres/find') { subject.find(4) } }
 
         it 'returns a genre' do
-          expect(genre).to be_a Igdb::GenreRepresenter
+          expect(genre).to be_a Igdb::Genre
         end
         
         it 'returns the correct genre' do

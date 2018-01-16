@@ -29,7 +29,7 @@ describe Igdb::Collection do
         let(:collection) { VCR.use_cassette('collections/count') { subject.count } }
         
         it 'return the number of collections in the database' do
-          expect(collection).to eq(3941)
+          expect(collection).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Collection do
         let(:collection) { VCR.use_cassette('collections/find') { subject.find(1) } }
 
         it 'returns a collection' do
-          expect(collection).to be_a Igdb::CollectionRepresenter
+          expect(collection).to be_a Igdb::Collection
         end
         
         it 'returns the correct collection' do

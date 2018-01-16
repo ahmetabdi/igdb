@@ -29,7 +29,7 @@ describe Igdb::Theme do
         let(:theme) { VCR.use_cassette('themes/count') { subject.count } }
         
         it 'return the number of themes in the database' do
-          expect(theme).to eq(21)
+          expect(theme).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Theme do
         let(:theme) { VCR.use_cassette('themes/find') { subject.find(1) } }
 
         it 'returns a theme' do
-          expect(theme).to be_a Igdb::ThemeRepresenter
+          expect(theme).to be_a Igdb::Theme
         end
         
         it 'returns the correct theme' do

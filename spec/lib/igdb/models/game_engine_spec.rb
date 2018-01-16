@@ -29,7 +29,7 @@ describe Igdb::GameEngine do
         let(:game_engine) { VCR.use_cassette('game_engines/count') { subject.count } }
         
         it 'return the number of game engines in the database' do
-          expect(game_engine).to eq(537)
+          expect(game_engine).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::GameEngine do
         let(:game_engine) { VCR.use_cassette('game_engines/find') { subject.find(2) } }
 
         it 'returns a game_engine' do
-          expect(game_engine).to be_a Igdb::GameEngineRepresenter
+          expect(game_engine).to be_a Igdb::GameEngine
         end
         
         it 'returns the correct game_engine' do

@@ -29,7 +29,7 @@ describe Igdb::Platform do
         let(:platform) { VCR.use_cassette('platforms/count') { subject.count } }
         
         it 'return the number of platforms in the database' do
-          expect(platform).to eq(146)
+          expect(platform).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Platform do
         let(:platform) { VCR.use_cassette('platforms/find') { subject.find(3) } }
 
         it 'returns a platform' do
-          expect(platform).to be_a Igdb::PlatformRepresenter
+          expect(platform).to be_a Igdb::Platform
         end
         
         it 'returns the correct platform' do

@@ -29,7 +29,7 @@ describe Igdb::GameMode do
         let(:game_mode) { VCR.use_cassette('game_modes/count') { subject.count } }
         
         it 'return the number of companies in the database' do
-          expect(game_mode).to eq(5)
+          expect(game_mode).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::GameMode do
         let(:game_mode) { VCR.use_cassette('game_modes/find') { subject.find(1) } }
 
         it 'returns a game_mode' do
-          expect(game_mode).to be_a Igdb::GameModeRepresenter
+          expect(game_mode).to be_a Igdb::GameMode
         end
         
         it 'returns the correct game_mode' do

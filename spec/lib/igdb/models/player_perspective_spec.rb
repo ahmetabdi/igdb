@@ -29,7 +29,7 @@ describe Igdb::PlayerPerspective do
         let(:player_perspective) { VCR.use_cassette('player_perspectives/count') { subject.count } }
         
         it 'return the number of player perspectives in the database' do
-          expect(player_perspective).to eq(7)
+          expect(player_perspective).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::PlayerPerspective do
         let(:player_perspective) { VCR.use_cassette('player_perspectives/find') { subject.find(1) } }
 
         it 'returns a player_perspective' do
-          expect(player_perspective).to be_a Igdb::PlayerPerspectiveRepresenter
+          expect(player_perspective).to be_a Igdb::PlayerPerspective
         end
         
         it 'returns the correct player_perspective' do

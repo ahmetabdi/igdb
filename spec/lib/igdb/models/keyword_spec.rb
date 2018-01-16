@@ -29,7 +29,7 @@ describe Igdb::Keyword do
         let(:keyword) { VCR.use_cassette('keywords/count') { subject.count } }
         
         it 'return the number of keywords in the database' do
-          expect(keyword).to eq(10733)
+          expect(keyword).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Keyword do
         let(:keyword) { VCR.use_cassette('keywords/find') { subject.find(3) } }
 
         it 'returns a keyword' do
-          expect(keyword).to be_a Igdb::KeywordRepresenter
+          expect(keyword).to be_a Igdb::Keyword
         end
         
         it 'returns the correct keyword' do

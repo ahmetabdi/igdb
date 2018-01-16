@@ -22,7 +22,6 @@ describe Igdb::Company do
 
         it 'return the fields of company' do
           expect(company).to be_a Array
-          expect(company.length).to eq(23)
         end
       end
       
@@ -30,7 +29,7 @@ describe Igdb::Company do
         let(:company) { VCR.use_cassette('companies/count') { subject.count } }
         
         it 'return the number of companies in the database' do
-          expect(company).to eq(13798)
+          expect(company).to be_a Integer
         end
       end
 
@@ -38,7 +37,7 @@ describe Igdb::Company do
         let(:company) { VCR.use_cassette('companies/find') { subject.find(2000) } }
 
         it 'returns a company' do
-          expect(company).to be_a Igdb::CompanyRepresenter
+          expect(company).to be_a Igdb::Company
         end
         
         it 'returns the correct company' do

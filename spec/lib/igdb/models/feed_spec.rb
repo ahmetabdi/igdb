@@ -29,7 +29,7 @@ describe Igdb::Feed do
         let(:feed) { VCR.use_cassette('feeds/count') { subject.count } }
         
         it 'return the number of feeds in the database' do
-          expect(feed).to eq(168675)
+          expect(feed).to be_a Integer
         end
       end
 
@@ -37,7 +37,7 @@ describe Igdb::Feed do
         let(:feed) { VCR.use_cassette('feeds/find') { subject.find(14428) } }
 
         it 'returns a feed' do
-          expect(feed).to be_a Igdb::FeedRepresenter
+          expect(feed).to be_a Igdb::Feed
         end
         
         it 'returns the correct feed' do

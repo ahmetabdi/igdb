@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/keywords/3?fields=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:07:05 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '1079'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/02V206kOQyE36Wvo8F2EjvhVUajFQuIRWIOokFcrPbd96sgjeairb8Tx7Grys7Xfy/PD5fb3i4/7r4/Xm4vdy/Pjz+ul3a5f328e3t8+Ovu7XLr3WLZtCgza5f3Xw9/bEWPtcPH2bq+vD/9GeX99YW//7y9/bre3tx8fHx8eX56+PvL/c/vN/fEePr5+vx4vfnt/kQS18vt17GjzVH8Vtsr+RW/3fY2fs73ah6F6X7MxoRj+my+Mlr4p9kyq0VYYry36MSNXlrrjgl9LWNtszsHJ+Zkg6IwhnM5Z5OrI7WRM1r11j3ksDdffTfq780dM3ywGzZlss2KrUMK3LnBZHo035yaa482Y5Kltr1lsZo1TMZb1bQ25VNhrffVcuFdc68209gnwXISrK4LqI1zo61RhVnHgFv45EslOBhss5AhTQI0Kl1tTRIeMN0WlIJ8ymNovcvwlV0GlFYqZp+QEotqFjf6yCRBgm/K2AXAe+eQCRnAMZefDQpwU1iISQdAt+2Q5x6CsEO6voHI+pav7WIlznoABj6IzS2XwEEfDidL7kP0SzWRQDgWYJbi9TQu2OYmeQAjbONPNedUB9ElIupsj1YgRwYKF6ieC5YyIR0FGMvbKM4Owaf/cWyX3XnsPFYyHRJmcHfr4mKUkuhz4tdT8g0pwQNU25AwKb4E6KkG95ClHJ8eKTuOXcpdsbdTkG9l0XtKhKZ8tkRtS6Go/jC81A1YmmOoH1RmDJobKsgquEC4cjPfQCKrPsKqN447ntxTp5fKSIL+4NREyoqQUx0TuqroNfjpJB01Q/4TpeYEvp6H8rkRJmkQBscSaOKMekSoBDtzAUMf0bLbySKFs3ENUkyFhrK2CsRpt5IcJY7xeSFQtowtAdG8XUHoGK4l9JAQulZxm4KJG/BALIQaQ0XZEWtnt0MH5dCMfnzoljT5jKzU+hLak9YpZVzWlRbZgzDTg1aHbnS3tu5I6sZCzlzlCM5EyNCUWJPccpe8E9zamBoFEIzYZkmtQduUiFKm+wQhTEsmtBBaai36a2rW9DgDgzhpydkMkMamq2LNjxgaLLSWKB2JEMiOmjKKdCSss5LCsMiewjRnbKqP9gQgL8ZXjqC/kxlCynSuOoPWpQsVJokvHkH6TL2zIihROxAVrwhjXV26wFJ1qoVAcWpaa17CMHlDWkg3bCbZnIWhYaoozHtUM4YIYQwSDIu7Q+Tx/FzX8B0m7gWFI3Hy5q4piziZNNK1UQoZD2rwFaYBPfVuDJ2au5DgXJozvpfqCUE3SkrqW70LosJsqwYTFxBEw6ZJvdx0VLkqzgBUKcbURiB0BpfqnTLlrfcKodPEsAvzotJ3iAI9COpx0txqWpOdJajzvG9+3oulB6eTtunVm3oGUpMskA0DkpeuSOoc35quub/99+1/tgWMeRwIAAA=
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:07:05 GMT
+recorded_with: VCR 4.0.0

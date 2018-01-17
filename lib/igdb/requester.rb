@@ -1,55 +1,53 @@
 require 'rest_client'
+require 'json'
 
-class Igdb::Requester
-  class << self
-
-    def get(action, params={})
-      url = api.url_for(action, params)
-      perform_request do
-        parse_response(RestClient.get(url, request_headers))
+module Igdb
+  class Requester
+    class << self
+      def get(action, params = {})
+        url = api.url_for(action, params)
+        perform_request do
+          parse_response(RestClient.get(url, request_headers))
+        end
       end
-    end
 
-    def post(action, params={}, form_data={})
-      url = api.url_for(action, params)
-      perform_request do
-        parse_response(RestClient.post(url, form_data.to_json, request_headers))
+      def post(action, params = {}, form_data = {})
+        url = api.url_for(action, params)
+        perform_request do
+          parse_response(RestClient.post(url, form_data.to_json, request_headers))
+        end
       end
-    end
 
-    def delete(action)
-      url = api.url_for(action)
-      perform_request do
-        parse_response(RestClient.post(url, {}, request_headers))
+      def delete(action)
+        url = api.url_for(action)
+        perform_request do
+          parse_response(RestClient.post(url, {}, request_headers))
+        end
       end
-    end
 
-    private
-    def api
-      Igdb::Configuration::Api.instance
-    end
+      private
 
-    def perform_request(&block)
-      begin
-        block.call
+      def api
+        Igdb::Configuration::Api.instance
+      end
+
+      def perform_request
+          yield
       rescue RestClient::Exception => e
-        raise Igdb::Exception::Api.new(e.message)
+          raise Igdb::Exception::Api, e.message
       end
-    end
 
-    def request_headers
-      Hash.new.tap do |headers|
-        headers['Accept'] = 'application/json'
-        headers['Content-Type'] = 'application/json'
-        headers['Authorization'] = 'Token token="' + api.api_key + '"'
+      def request_headers
+        {}.tap do |headers|
+          headers['Accept'] = 'application/json'
+          headers['user-key'] = api.api_key
+        end
       end
-    end
 
-    def parse_response(response_body)
-      begin
-        JSON.parse(response_body)
+      def parse_response(response_body)
+          JSON.parse(response_body)
       rescue JSON::ParserError => e
-        raise Igdb::Exception::JsonParseError.new("Response body could not be parsed: #{e.message}")
+          raise Igdb::Exception::JsonParseError, "Response body could not be parsed: #{e.message}"
       end
     end
   end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/games/2000
+    uri: https://api-2445582011268.apicast.io/games/2000?fields=*
     body:
       encoding: US-ASCII
       string: ''
@@ -11,69 +11,35 @@ http_interactions:
       - application/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Wed, 29 Jul 2015 12:31:04 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=dc64f5c5e53f609bb896cd00f8090b0d91438173063; expires=Thu, 28-Jul-16
-        12:31:03 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"928298c6ddb208eb84c62d541d2c62d2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - fc5fbc5e-103b-49f7-b259-2e2789fd6559
-      X-Runtime:
-      - '0.142812'
-      Vary:
-      - Accept-Encoding
       Content-Encoding:
       - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 20d8d6b1ab070a72-LHR
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:01:34 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '1392'
+      Connection:
+      - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAIjHuFUA/5xTzYrbMBB+lUFn5x9akluXQCl0S9i07KFbjCJN7CmyxpXk
-        hBDyUn2EPllHtjel0FNPZsbffD/j8VVVukG1uSqyarOcz+eF8n1H7Tgm7VSh
-        ousqqdt73TWNDpc7BCiChtiFE52kqjkEDtLkBlMgA6mmYCcthsgeYs2cMMCJ
-        LDJkcbB4QsctWjhc4KnznnwFz5Rq2BuKkYPQewttd3AU6xFGreFg4b0QRCAP
-        i/X67RTeQcQfHTpILLLY8xcw2Pz1s4CzjhDQoY5CI1MSeDWFLQU0STx/OSM8
-        sJMMgjtwV9Wpp2n4RAiBpI5wFGBuRgyEsei9ZXwb2HZGeDUcyTXAxwGWI+aV
-        ZnePOpg6qy7ExmR08ooczBrtnJCMq925TiTIG9fZnvpF7Vs0JK+26OiE4fKi
-        QFs7YS+fpkIfMKrN1+vrV9wP+1a3b4Ua9Uqr0whqnU6SpylH9COZwJGPSfbv
-        LZ+j+ntKIHnRk/l6spr3nIbFg7TrlNq4mc2oqYz1U6rsYWq4kVpXGGc5W5wN
-        JzQ+yn60THXXHEqdyjwivWb6va3ylZmA6OVc0mC1x/2f0B+qUW25Wrz5h2Si
-        5HLED76/y/19rE/aX+zoZQR+DpqcxC9Ul38ftdRP/On88Xm3zcu53X4DAAD/
-        /wMATjAue14DAAA=
-    http_version:
-  recorded_at: Wed, 29 Jul 2015 12:31:04 GMT
-recorded_with: VCR 2.9.3
+        H4sIAAAAAAAC/61Wy27jNhT9FUJrxbYk62HvWgRoC7TFdGaKWUwGBiXREmOJVEhKijrIT/UT+mU9V3ISY5p0MchOIu/j3HMPL/n5qydLbx9uNhvfU7wV3t57p63jjed7tukr/HeP/71p8Fs719n9ej2O40pWZb4qdLuu4GrXT5aFEdyJ8sCdtw+iZBunUZIlaZogSFc+b8VBnCVJkoXBLkC+vm25mZ4gMGkZZ7Y3gxzwV2tjtMGiboUzsmCulqa86oSxWjFba+2EYYMshWaEh5ViEI3uRMnyib3vlZKqYp+kq9mHQlqrDcKrknV93khbn81kV2hTsp+oICYVC3a7dMV+YFbc9aJhTiOtmOP7bIH5z98+G7llRjSCW4SBFwiNVuxaGlE4YP5zFOxH3aAG2OW6r2o3h2n1IAUzEv+WHWFIi1YYKaw/YyP7zuiyLxCXs6NsWqaPixmVSC0jdL9xU9SUNQCMqzOSR8sFbMGbBkHO1L5reqSQqmj6cg59433oRCGxdS0aOQgz3XiMl+WVViQFVDE1UpE+PtbCCOqN0qxrtGPAaPuiXjHsAK2wQhVzcj4XCNIHrhh6RGCO0ljHGmoNvKpKWJTuar4QckZ3DVALV0IoJgZZQDLsaHTLaiSuoYCZHkmuQAPqBCqoNCVbVHjj+SzvHYHMeXGqjO7hMNeBgLoZ0N6yN+TwyNGK/axHADP+0hyuepKdVK8hzMGUoEC1bK1ojqSOXDDHTSXcoidycXpUSzulusqFG6momQG0oGv4JEiJqKAC7wqsFTUnBhGtFAAKN3xS4Z2dilpbfI0kY91KpXvUITlVpRwJhxVaOS5nsXe1gQ4sa+SJ+KH+CG7gSST2qjLTiv2C6mpaBVaj8+VMlALVl4gFISmLUEtzn5x5Y/V8/qybVqvVjbfsz8dOkOOM71u+uHOi7dzMuQa/1nJMCiRkEGwL/FSGRYW6WZp35LIh67Kf2aj5rCbIimwblmPMnEqwO2NGXtrtOwb25yQF71xvnhtRaTRXkfO5GwWOjTA0j+jQAge3U9O3KxphOK44vBLy30cpphPMENPbJ7tVEAZZnKabDAeOtjrd9Q030mF2BavY95wGvMP/eFwaHApIc56Gj0kuV+bJ6u0/R9tdsPPTMEojP8B02flJFoVbP9mGm60fJNsk87ebGCtpEgQbP94msAmzOA6/IB+vKEjgh0m2jbD39JVlfozhnAbwReA0SrdBFqbwKcBLpWke425YZHqgYdsRLcMC6ssC8NDqcl4IsHAS04gROv9uN5S8Fu3TbiWUmX9iPyJk8zw4nCfWge4Gb5+lMchKNpv5WgK32HmkZIbicOBbCpIgwqUvrX29QB4/m6MPvvdS/LqH1jHXaNJf/RGh99RG/PgenHYPSGEhU6FwxbglwXITrtey5Rhgz9cgfSyL6x6jkZdrd3CIn6/zbjBRG0yb6nbo7m/dqd+1q9uuIqU1uodyof0D3cXeS6YwG2XpagIWEmZBdwb+Ntnmwf8eQBUm/33W3uIeKLN0DG2Qy1cAvWT69oDMnbi7P56GXeBCez+J6ZRMrwB6yfTtAUmet9XYFlUSQLTHwaXt8Aqgl0zfHpAOpcqL4S7e3MZlP8mtvD+9Augl02dAYby7wLPbksTnd9Oi7vM78KPB9BXGO+8tgUP+Xv8+/vrp3fXGI7eCRqq3/55y+F/bnVI8rvKmNbZpXeDUK+W8ZHrJ70U5YRw9+J6wJidUdlK6w32JGN7FCIfFKHIr/zswgstn7vmVa5anI11p9vxwpNI86uKFZ/TtC5keG2JlneBth4cFLqKZEd516zAKcRvMDIp7PFsVns0El2yJ5fP2w5d/AVQHor+hCwAA
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:01:34 GMT
+recorded_with: VCR 4.0.0

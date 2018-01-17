@@ -1,6 +1,18 @@
 language: ruby
 rvm:
-  - 2.2.2
-env:
-- CODECLIMATE_REPO_TOKEN=8ffbec2a216b73652275893dbfb29f9b73035ba8e7d00f4743ec4824f8eacfdd
-script: bundle exec rspec spec
+  - 2.3
+install: bundle install --jobs=3 --retry=3
+addons:
+  code_climate:
+    repo_token: 8ffbec2a216b73652275893dbfb29f9b73035ba8e7d00f4743ec4824f8eacfdd
+script: rspec spec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: RnBGM9OBcB+Ca6BipNSPQrySAOCXTV/i4IeEAoNfkiC7WUFCI/NwIA3XTqzvtf1A+pEJsAcTpfRlQ3COvet4UVEH4AVRitD8HCbClHVDAClqx9qfoMj0e7dmmGdaQxCtc673VYcLDI/F80cnOMuHl8t0K+yxPqnkbyQRE2mJcsqBwTQOR44mJQkWfcptSSvvq8/f/7tOC10biKL53DxgPGWoyg1zzoscGqO7jm5wkwH+n4lXn74RanIHVSRM+fAst4/Tjzl+9rE9YyxztK+L9NY18NC4VJY19aJUPu5cFZrJbfJW1q3m8tq66KC+L48c9gdeyrJlfRxVGdAbEVtO15Pt3zInO7P3dtPZIRcoGfk0TdgKQIJXH3oMxj52Cy1aiDTZJov08MMZfhq9szglF1qj1ij6Ynuq/Eb/qMiFvAHEWCdTSV0oINtNP3sG8McGxhTS4dBnSgVfGNpGfOQdmkn/SMXYVXgwaXa41yXKIgTCebbMUZwMi+iAn2KAUaXHocAaCc3DRoFtUraBxOg8lNeTWy6qvTk8UfUmJxmMuxMopt/vB6KYzTc3RCPgKuKgYV338A4A7rKDB702HxpWqLpCOhvK909g03MLgH57/EzEPtHzo9KcSSAqWskHSlh8KSru15cUgri0ncUkmYlC8UdcY0RVge3RBAQOnoEb1MM=
+  gem: 
+    master: igdb2
+    develop: igdb2-latest
+  on:
+    tags: true
+    repo: kalynrobinson/igdb

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/pulse_groups/31?fields=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:07:08 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '185'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/1WOvQ6CQBCEX8VsY7PF/e4e9wT2lISYA04kOZHwUxjju3vSGKqZyWS+TPWGoQOvJcIYHhE8XGJKTQpd9Kcyjls4L6cytPNwG9oICG1YY/+cX+DzpJ1jjt01rDmagpxhR0SsELapO1ZWkNKWLcK0NWlY7sdSqUIIgbCGfgFfSVSZpq1xf8fohNVSFyxRCtZspFNUI/T7cyahf/C0xJ1gJDuNWYhk/am/ra/1qeoAAAA=
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:07:08 GMT
+recorded_with: VCR 4.0.0

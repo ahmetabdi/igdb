@@ -1,11 +1,24 @@
-module Igdb::CompanyRepresenter
-  include Representable::JSON
+require 'ostruct'
+require 'representable/json'
 
-  property :id # The id of the game.
-  property :name # The name of the company.
-  property :average_rating # The average rating of all the games the company that has developed or published.
-  property :parent # The id of the parent company.
-  property :size # The number of companies in the database.
+# URL path: /companies/
+# Video game companies. Both publishers & developers
+module Igdb
+  class CompanyRepresenter < Igdb::Representer
+    collection_representer class: Igdb::Company
 
-  collection_representer class: Igdb::Game
+    property :logo
+    property :description
+    property :country
+    property :website
+    property :start_date
+    property :start_date_category
+    property :changed_company_id
+    property :change_date
+    property :change_date_category
+    property :twitter # The URL of the Twitter profile
+
+    collection :published
+    collection :developed
+  end
 end

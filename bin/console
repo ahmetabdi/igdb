@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "igdb"
+require 'bundler/setup'
+require 'igdb'
 require 'byebug'
 
 # You can add fixtures and/or initialization code here to make experimenting
@@ -11,5 +11,5 @@ require 'byebug'
 # require "pry"
 # Pry.start
 
-require "irb"
+require 'irb'
 IRB.start

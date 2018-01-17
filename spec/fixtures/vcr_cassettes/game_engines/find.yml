@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/game_engines/2?fields=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:07:03 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '383'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/21RSW7DMAz8i85EtG9+QD9RBIESKbZab7VlpGnRv5dyD8mhl4FEDkfD0es3yZE0AsgYhkQa8rJMaznnkgiQy5JCSfEUCmm49F4zrZkyhgPZ5vhoaeaNtoI7qSyQfmon0nyTbelRj9I8hDath9zG8+EyDbQe/op0m/spRFpOpduGM72nYvsUQ9/d5/ePzzlerl+Ht7mtVvppi3kMy/1U/ZL/qEi75Vg6XEcbIF3KbVf2yw+Qtd9anLs+rfdnsCtlXhtKb7fbw2OLYZzS2OYxrfR5pjZW0rxa5jhIJj0IzmUFAdxbjzUvQSpZm6aCreBACwMYkKgEVUFXMCCYVaAs8jUKagGGWdB6H5XAJasnjy2uUKAGjTIcv6CKMUQmkOa51CjFnd/RISrLQAhvBAjDHT60W+ZeaeQ4b7DiLKoLoxjKG/xd0FxVpkENZDqDTCm8PAKZ+1Cu0zLU3T3gssqB8mCwhXnNYcx7LF4df46/g8MDwVQCAAA=
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:07:03 GMT
+recorded_with: VCR 4.0.0

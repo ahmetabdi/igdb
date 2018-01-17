@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.igdb.com/api/v1/companies/meta
+    uri: https://api-2445582011268.apicast.io/companies/meta
     body:
       encoding: US-ASCII
       string: ''
@@ -11,58 +11,35 @@ http_interactions:
       - application/json
       Accept-Encoding:
       - gzip, deflate
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="egBf"
       User-Agent:
-      - Ruby
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Mon, 03 Aug 2015 07:57:56 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d1749d6acfd00c01559234ef8937ede8c1438588676; expires=Tue, 02-Aug-16
-        07:57:56 GMT; path=/; domain=.igdb.com; HttpOnly
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - W/"d6882c1d9f2591006aa90518f3f018c6"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c9b5cf9a-1b58-4a03-85a1-897e75b807c0
-      X-Runtime:
-      - '0.031405'
-      Vary:
-      - Accept-Encoding
       Content-Encoding:
       - gzip
-      Via:
-      - 1.1 vegur
-      Strict-Transport-Security:
-      - max-age=15552000; preload
-      Cf-Ray:
-      - 2100797c1a580b87-LHR
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:07:00 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '174'
+      Connection:
+      - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAQfv1UA/6pWKs6sSlWyMrU0NKkFAAAA//8DAGzB4bgNAAAA
-    http_version:
-  recorded_at: Mon, 03 Aug 2015 07:57:56 GMT
-recorded_with: VCR 2.9.3
+        H4sIAAAAAAAC/1WO4Q6DIAyE38Xfiy+0LKRCB82QklJmfPuB06h/2rtL8/WeQ4IZh8dgBUHRGdBmananKbH6nklsM7LnfY1nMtrI1VECWQ25I1zIaThMQPKh4xwWK5SVOHW4gqjp327G2DY8y9qbcU26qQWnQttlBsHUaTZA8q2p5TlD2r//w4N6cVesLqSK0tQbLE7Mn86tU6QS0G1Fvxg5N/36ARWPBwcmAQAA
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:07:00 GMT
+recorded_with: VCR 4.0.0

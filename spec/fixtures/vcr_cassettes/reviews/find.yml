@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/reviews/2234?fields=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      User-Key:
+      - 070702fa7336d87a8cdd509beb23e2f4
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jan 2018 18:07:10 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '724'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/21TTYvbSBD9K4Uuk4Bsx04CE982G8jmsLdhLztLKEklqXGrW3SXLMSS/55X7YlDIAdBq+vr1Xuv//2/cl11Pp3evqurNgmrdF9Zq/Px/fF4Op5Oxw+nx8e6WubuN6F3H94ilCUFnqQ6VxN3A06pqqvslwE37W53xN+SPH5G1TmfD4d1Xfdu6Jp9G6eDFeRDXmZJuwnzd03cDkmuTtZ8eClXp976tzgPZdTj43vgBaQhpg2Q6sq7i+Tq/KauSmk5JVYXhq8/804oikElYI3qD5o9ax8TENMWF2o5kHB2fqPZtRdaZuLQUVZOarkbmtXULEqr854aoT4tWZMxQ6/mmLNrUOsCMQ0xdrTy9po0Evacvajsn8NzeBqFPiN6fg67fyRtNnKzrPtMxVjcuElqWkfREficPmQCVjq+oQkTcLK/MS4po+3uc+J5dG2miTfKIhPFRYtmN8SchLjVhT0Q9k6NGIo9obl9k5RVQ9x1jn0cFoxuFxUsD+JswF9uGCmJ0cCN8063n+AA3k1zilcpqHN93xgzRydX9A+K6yX4iCXbkRPASMoHj6DPts4gWtBkiJZ7hF0MhvClleF9SeaBXTBMn0wRJARIFBSLraPzgjROwSJ8qyCXIQospdx4ufGRxEfubpFSzUHiUqj8Ew5J0Xvr8DccSR8jKBObfDW98hSjjvTqywP2jcHcAlJggdXh+iJbEzl1r+9if+Si9SfX965dvG6UeJozpK4L6U6L82z/0v+HqTB/T1+UOpkldOAoFJfeSR8BforqrlA5l1CxWkChyad8Af3U4FFfaiM48SC/WMWmzuAiR8g/SwTNILwn11u3BzgGb7uzrk8J/O3siQGFFJZss2IO4zBE22EuWO6PZIrJ+gFDj+dyswngBWlvQt/U3NOTLWLP2jrBn8QNvFtS7NbIfeEJ+wq8EwB+X3377zvX5q51vQQAAA==
+    http_version: 
+  recorded_at: Tue, 16 Jan 2018 18:07:10 GMT
+recorded_with: VCR 4.0.0

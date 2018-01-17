@@ -1,27 +1,6 @@
-class Igdb::Game < Igdb::ApiResource
-
-  def self.meta
-    build_single_resource(Igdb::Requester.get("games/meta"), Igdb::GameRepresenter).size
+module Igdb
+  class Game < Igdb::ApiResource
+    @path = 'games'
+    @representer = Igdb::GameRepresenter
   end
-
-  def self.find(id)
-    build_single_resource(Igdb::Requester.get("games/#{id}")['game'], Igdb::GameRepresenter)
-  end
-
-  def self.search(opts={})
-    params = Hash.new.tap do |hash|
-      hash['q'] = opts[:query] if opts[:query]
-      hash['filters'] = opts[:filters] if opts[:filters]
-    end
-    build_collection(Igdb::Requester.get("games/search", params)['games'], Igdb::GameRepresenter)
-  end
-
-  def self.all(opts={})
-    params = Hash.new.tap do |hash|
-      hash['offset'] = opts[:offset] || 0
-      hash['limit'] = opts[:limit] || 100
-    end
-    build_collection(Igdb::Requester.get("games", params)['games'], Igdb::GameRepresenter)
-  end
-
 end

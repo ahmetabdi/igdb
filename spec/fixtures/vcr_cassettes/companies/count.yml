@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/companies/count/
+    uri: https://api-endpoint.igdb.com/companies/count/
     body:
       encoding: US-ASCII
       string: ''
@@ -15,10 +15,10 @@ http_interactions:
       - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
       Content-Type:
       - text/json
-      X-Mashape-Key:
-      - "<X-Mashape-Key>"
+      user-key:
+      - "<user-key>"
       Host:
-      - igdbcom-internet-game-database-v1.p.mashape.com
+      - api-endpoint.igdb.com
   response:
     status:
       code: 200
@@ -40,7 +40,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"count":11648}'
-    http_version: 
+      string: '{"count":14752}'
+    http_version:
   recorded_at: Thu, 23 Mar 2017 00:35:43 GMT
 recorded_with: VCR 2.9.3

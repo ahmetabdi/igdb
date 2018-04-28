@@ -15,22 +15,22 @@ describe Igdb::Company do
 
     context "executes methods correctly" do
       context "self.count" do
-        let(:response) { 
-          VCR.use_cassette("companies/count") { 
-            subject.count 
-          } 
+        let(:response) {
+          VCR.use_cassette("companies/count") {
+            subject.count
+          }
         }
 
         it "returns the number of companies in the database" do
-          expect(response).to eq(11_648)
+          expect(response).to eq(14_752)
         end
       end
 
       context "self.find" do
-        let(:response) { 
-          VCR.use_cassette("companies/find") { 
-            subject.find(2_000) 
-          } 
+        let(:response) {
+          VCR.use_cassette("companies/find") {
+            subject.find(2_000)
+          }
         }
 
         it "returns a company" do

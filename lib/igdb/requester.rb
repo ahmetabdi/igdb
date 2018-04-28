@@ -1,4 +1,5 @@
 require 'rest_client'
+require 'json'
 
 class Igdb::Requester
   class << self
@@ -41,7 +42,7 @@ class Igdb::Requester
       Hash.new.tap do |headers|
         headers['Accept'] = 'text/json'
         headers['Content-Type'] = 'text/json'
-        headers['X-Mashape-Key'] = api.api_key
+        headers['user-key'] = api.api_key
       end
     end
 

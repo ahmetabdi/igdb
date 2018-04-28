@@ -17,22 +17,22 @@ describe Igdb::Game do
 
     context "executes methods correctly" do
       context "self.count" do
-        let(:response) { 
-          VCR.use_cassette("game/count") { 
-            subject.count 
-          } 
+        let(:response) {
+          VCR.use_cassette("game/count") {
+            subject.count
+          }
         }
 
         it "returns the number of games in the database" do
-          expect(response).to eq(26_091)
+          expect(response).to eq(96_556)
         end
       end
 
       context "self.find" do
-        let(:response) { 
-          VCR.use_cassette("game/find") { 
-            subject.find(2000) 
-          } 
+        let(:response) {
+          VCR.use_cassette("game/find") {
+            subject.find(2000)
+          }
         }
 
         it "returns a game" do
@@ -41,10 +41,10 @@ describe Igdb::Game do
       end
 
       context "self.search" do
-        let(:response) { 
-          VCR.use_cassette("game/search") { 
-            subject.search(query: "batman") 
-          } 
+        let(:response) {
+          VCR.use_cassette("game/search") {
+            subject.search(query: "batman")
+          }
         }
 
         it "returns a group of game results" do
@@ -55,22 +55,22 @@ describe Igdb::Game do
       end
 
       context "self.all" do
-        let(:response) { 
-          VCR.use_cassette("game/all") { 
-            subject.all 
-          } 
-        }
-        
-        let(:response_with_limit) { 
-          VCR.use_cassette("game/all-limit") { 
-            subject.all(limit: 5) 
-          } 
+        let(:response) {
+          VCR.use_cassette("game/all") {
+            subject.all
+          }
         }
 
-        let(:response_with_limit_and_offset) { 
+        let(:response_with_limit) {
+          VCR.use_cassette("game/all-limit") {
+            subject.all(limit: 5)
+          }
+        }
+
+        let(:response_with_limit_and_offset) {
           VCR.use_cassette("game/all-limit-and-offset") {
-            subject.all(limit: 5, offset: 2) 
-          } 
+            subject.all(limit: 5, offset: 2)
+          }
         }
 
         it "returns a list of games" do

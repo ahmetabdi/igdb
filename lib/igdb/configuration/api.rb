@@ -4,7 +4,7 @@ module Igdb::Configuration
   class Api
     include Singleton
 
-    DEFAULT_API_URL = 'https://igdbcom-internet-game-database-v1.p.mashape.com'
+    DEFAULT_API_URL = 'https://api-endpoint.igdb.com'
 
     attr_reader :base_url, :api_key, :version
 

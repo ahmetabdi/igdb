@@ -1,9 +1,8 @@
-module Igdb::GameScreenshotRepresenter
+module Igdb::ImageRepresenter
   include Representable::JSON
 
-  property :title
   property :url
+  property :cloudinary_id
   property :width
   property :height
-  property :id
 end

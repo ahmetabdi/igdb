@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://igdbcom-internet-game-database-v1.p.mashape.com/games/count/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.1 (linux-gnu x86_64) ruby/2.3.1p112
+      Content-Type:
+      - text/json
+      X-Mashape-Key:
+      - "<X-Mashape-Key>"
+      Host:
+      - igdbcom-internet-game-database-v1.p.mashape.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/json
+      Date:
+      - Thu, 23 Mar 2017 00:35:43 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '7000'
+      X-Ratelimit-Requests-Remaining:
+      - '6997'
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"count":96556}'
+    http_version:
+  recorded_at: Thu, 23 Mar 2017 00:35:44 GMT
+recorded_with: VCR 2.9.3

@@ -1,16 +1,14 @@
 # IGDB: Internet Game Database
-[![Circle CI](https://circleci.com/gh/ahmetabdi/igdb.svg?style=svg)](https://circleci.com/gh/ahmetabdi/igdb)
-[![Build Status](https://travis-ci.org/ahmetabdi/igdb.svg)](https://travis-ci.org/ahmetabdi/igdb)
-[![Code Climate](https://codeclimate.com/github/ahmetabdi/igdb/badges/gpa.svg)](https://codeclimate.com/github/ahmetabdi/igdb)
-[![Test Coverage](https://codeclimate.com/github/ahmetabdi/igdb/badges/coverage.svg)](https://codeclimate.com/github/ahmetabdi/igdb/coverage)
-[![Gem Version](https://badge.fury.io/rb/igdb.svg)](http://badge.fury.io/rb/igdb)
-[![Dependency Status](https://gemnasium.com/ahmetabdi/igdb.svg)](https://gemnasium.com/ahmetabdi/igdb)
+[![Build Status](https://travis-ci.org/tastycake/igdb_api.svg?branch=master)](https://travis-ci.org/tastycake/igdb_api)
+[![Code Climate](https://codeclimate.com/github/tastycake/igdb_api/badges/gpa.svg)](https://codeclimate.com/github/tastycake/igdb_api)
+[![Test Coverage](https://codeclimate.com/github/tastycake/igdb_api/badges/coverage.svg)](https://codeclimate.com/github/tastycake/igdb_api/coverage)
+[![Gem Version](https://badge.fury.io/rb/igdb_api.svg)](https://badge.fury.io/rb/igdb_api)
 
 ![Banner](http://orig08.deviantart.net/b5c1/f/2011/204/b/9/umvc3_roster_by_kiradaidohji-d41fyaq.png)
 
 ## Installation
 ```ruby
-$ gem install igdb
+$ gem install igdb_api
 ```
 ## Usage
 
@@ -29,7 +27,7 @@ $ Igdb::Game.search(query: 'batman')
 ```
   Return the number of games in the database
 ```ruby
-$ Igdb::Game.meta
+$ Igdb::Game.count
 ```
   Return a list of all games with an offset and/or limit
 ```ruby
@@ -45,7 +43,7 @@ $ Igdb::Person.find('derek-watts')
 ```
   Return the number of people in the database
 ```ruby
-$ Igdb::Person.meta
+$ Igdb::Person.count
 ```
   Return a list of all games with an offset and/or limit
 ```ruby
@@ -61,7 +59,7 @@ $ Igdb::Company.find('nintendo')
 ```
   Return the number of companies in the database.
 ```ruby
-$ Igdb::Company.meta
+$ Igdb::Company.count
 ```
   Return the games for a company
 ```ruby
@@ -69,7 +67,7 @@ $ Igdb::Company.find('2000').games
 ```
 ## Contributing
 
-1. Fork it ( https://github.com/ahmetabdi/igdb/fork )
+1. Fork it ( https://github.com/tastycake/igdb_api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
